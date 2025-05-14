@@ -5,8 +5,12 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const ApplicationsClosed = () => {
+  const isMobile = useIsMobile();
+  
   useEffect(() => {
     // Set page title
     document.title = "Applications Closed | EnAccelerator";
@@ -21,26 +25,76 @@ const ApplicationsClosed = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container py-16 md:py-24">
+      <main className="container py-8 md:py-16">
         {/* Back to Home Button */}
         <Link to="/" className="flex items-center text-sm mb-8 hover:text-brand-yellow transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Home
         </Link>
 
-        {/* Page Header */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-6">
-            Applications Closed
-          </span>
-          <h1 className="mb-6">EnAccelerator Applications</h1>
-          <p className="text-lg text-foreground/70">
-            Thank you for your interest in Melbourne's premier student startup incubator. Applications for our current cohort are now closed.
-          </p>
+        <div className="relative">
+          {/* Instax Photos - Left Side (hidden on mobile) */}
+          {!isMobile && (
+            <div className="hidden md:block absolute -left-20 top-10 z-10">
+              <div className="bg-white p-2 pb-14 shadow-md rotate-[-6deg] hover:rotate-[-3deg] transition-all duration-300 mx-auto max-w-[240px]">
+                <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" 
+                    alt="Student startup session" 
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
+                <div className="mt-2 text-center text-xs text-gray-600">Previous Cohort</div>
+              </div>
+            </div>
+          )}
+
+          {/* Page Header */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-6">
+              Applications Closed
+            </span>
+            <h1 className="mb-6">EnAccelerator Applications</h1>
+            <p className="text-lg text-foreground/70">
+              Thank you for your interest in Melbourne's premier student startup incubator. Applications for our current cohort are now closed.
+            </p>
+          </div>
+
+          {/* Mobile Instax Photo - Only shown on mobile */}
+          {isMobile && (
+            <div className="mb-12 mx-auto max-w-xs">
+              <div className="bg-white p-2 pb-14 shadow-md rotate-[2deg] hover:rotate-0 transition-all duration-300">
+                <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                    alt="Previous cohort session" 
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
+                <div className="mt-2 text-center text-xs text-gray-600">Cohort 2025</div>
+              </div>
+            </div>
+          )}
+          
+          {/* Instax Photos - Right Side (hidden on mobile) */}
+          {!isMobile && (
+            <div className="hidden md:block absolute -right-20 top-60 z-10">
+              <div className="bg-white p-2 pb-14 shadow-md rotate-[8deg] hover:rotate-[4deg] transition-all duration-300 mx-auto max-w-[240px]">
+                <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                    alt="Previous cohort session" 
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
+                <div className="mt-2 text-center text-xs text-gray-600">Cohort 2025</div>
+              </div>
+            </div>
+          )}
         </div>
         
         {/* Next Cohort Information */}
-        <section className="mb-16">
+        <section className="mb-12">
           <div className="bg-muted/30 p-8 rounded-lg border border-border text-center max-w-3xl mx-auto">
             <h2 className="mb-6">Next Application Cycle</h2>
             <div className="inline-block bg-brand-yellow/10 px-6 py-4 rounded-lg mb-8">
@@ -58,8 +112,8 @@ const ApplicationsClosed = () => {
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-16">
-          <h2 className="mb-8">Eligibility</h2>
+        <section className="mb-12">
+          <h2 className="mb-6">Eligibility</h2>
           
           <div className="bg-muted/30 p-8 rounded-lg border border-border">
             <ul className="space-y-4">

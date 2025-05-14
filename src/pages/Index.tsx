@@ -7,6 +7,7 @@ import TimelineSection from '@/components/TimelineSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import SignupSection from '@/components/SignupSection';
+import LogoCarousel from '@/components/LogoCarousel';
 import Footer from '@/components/Footer';
 import { initScrollReveal } from '@/utils/scrollReveal';
 
@@ -25,6 +26,7 @@ const Index = () => {
       
       <main>
         <HeroSection />
+        <LogoCarousel />
         <ProgramSection />
         <TimelineSection />
         <BenefitsSection />
