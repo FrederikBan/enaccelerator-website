@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,10 +27,10 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 bg-brand-yellow rounded-md"></div>
           <span className="font-bold text-lg">EnAccelerator</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
@@ -45,8 +46,8 @@ const Navbar = () => {
           <a href="#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">
             Testimonials
           </a>
-          <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90">
-            Apply Now
+          <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90" asChild>
+            <Link to="/apply">Apply Now</Link>
           </Button>
         </nav>
 
@@ -108,8 +109,9 @@ const Navbar = () => {
           <Button 
             className="bg-brand-yellow text-black hover:bg-brand-yellow/90 mx-4"
             onClick={() => setIsMobileMenuOpen(false)}
+            asChild
           >
-            Apply Now
+            <Link to="/apply">Apply Now</Link>
           </Button>
         </div>
       </div>
