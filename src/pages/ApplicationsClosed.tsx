@@ -35,8 +35,8 @@ const ApplicationsClosed = () => {
         <div className="relative">
           {/* Instax Photos - Left Side (hidden on mobile) */}
           {!isMobile && (
-            <div className="hidden md:block absolute -left-20 top-10 z-10">
-              <div className="bg-white p-2 pb-14 shadow-md rotate-[-6deg] hover:rotate-[-3deg] transition-all duration-300 mx-auto max-w-[240px]">
+            <div className="hidden md:block absolute -left-16 top-20 z-10">
+              <div className="bg-white p-2 pb-14 shadow-md rotate-[-6deg] hover:rotate-[-3deg] transition-all duration-300 mx-auto max-w-[300px]">
                 <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" 
@@ -78,8 +78,8 @@ const ApplicationsClosed = () => {
           
           {/* Instax Photos - Right Side (hidden on mobile) */}
           {!isMobile && (
-            <div className="hidden md:block absolute -right-20 top-60 z-10">
-              <div className="bg-white p-2 pb-14 shadow-md rotate-[8deg] hover:rotate-[4deg] transition-all duration-300 mx-auto max-w-[240px]">
+            <div className="hidden md:block absolute -right-16 top-40 z-10">
+              <div className="bg-white p-2 pb-14 shadow-md rotate-[8deg] hover:rotate-[4deg] transition-all duration-300 mx-auto max-w-[300px]">
                 <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
