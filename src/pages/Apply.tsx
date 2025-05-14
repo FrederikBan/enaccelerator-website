@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Apply = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const Apply = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container py-16 md:py-24">
+      <main className="container py-8 md:py-16">
         {/* Back to Home Button */}
         <Link to="/" className="flex items-center text-sm mb-8 hover:text-brand-yellow transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
@@ -29,7 +30,7 @@ const Apply = () => {
         </Link>
 
         {/* Page Header */}
-        <div className="max-w-3xl mx-auto mb-16">
+        <div className="max-w-3xl mx-auto mb-12">
           <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-6">
             Applications Open
           </span>
@@ -39,9 +40,51 @@ const Apply = () => {
           </p>
         </div>
         
+        {/* Instax Photos Gallery */}
+        <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="animate-fade-in">
+            <div className="bg-white p-2 pb-14 shadow-md rotate-[-2deg] hover:rotate-0 transition-all duration-300 mx-auto max-w-[300px]">
+              <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+                  alt="Students working on startup ideas" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <div className="mt-2 text-center text-xs text-gray-600">Workshop Session #1</div>
+            </div>
+          </div>
+          
+          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="bg-white p-2 pb-14 shadow-md rotate-[1deg] hover:rotate-0 transition-all duration-300 mx-auto max-w-[300px]">
+              <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
+                  alt="Team collaboration" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <div className="mt-2 text-center text-xs text-gray-600">Team Presentations</div>
+            </div>
+          </div>
+          
+          <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div className="bg-white p-2 pb-14 shadow-md rotate-[3deg] hover:rotate-0 transition-all duration-300 mx-auto max-w-[300px]">
+              <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                  alt="Mentoring session" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <div className="mt-2 text-center text-xs text-gray-600">Mentor Guidance</div>
+            </div>
+          </div>
+        </div>
+        
         {/* Timeline Section */}
-        <section className="mb-16">
-          <h2 className="mb-8">Application Timeline</h2>
+        <section className="mb-12">
+          <h2 className="mb-6">Application Timeline</h2>
           
           <div className="grid gap-6 md:grid-cols-3">
             <div className="bg-muted/30 p-6 rounded-lg border border-border relative">
@@ -68,8 +111,8 @@ const Apply = () => {
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-16">
-          <h2 className="mb-8">Eligibility</h2>
+        <section className="mb-12">
+          <h2 className="mb-6">Eligibility</h2>
           
           <div className="bg-muted/30 p-8 rounded-lg border border-border">
             <ul className="space-y-4">
@@ -125,8 +168,8 @@ const Apply = () => {
         </section>
         
         {/* Application Requirements */}
-        <section className="mb-16">
-          <h2 className="mb-8">Application Requirements</h2>
+        <section className="mb-12">
+          <h2 className="mb-6">Application Requirements</h2>
           
           <div className="grid gap-8 md:grid-cols-2">
             <div className="bg-muted/30 p-6 rounded-lg border border-border">
