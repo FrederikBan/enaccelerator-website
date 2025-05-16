@@ -14,17 +14,17 @@ const HeroSection = () => {
         <div className="max-w-3xl mx-auto text-center">
           <div className="animate-fade-in">
             <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-6">
-              By Enactus Melbourne
+              <a href="https://enactusmelbourne.com/" target="_blank">Presented By Enactus Melbourne</a>
             </span>
             
             <h1 className="mb-6">
-              Transform Your Ideas Into <br />
-              <span className="text-brand-yellow">Impactful Startups</span>
+              Turning Students Into <br />
+              <span className="text-brand-yellow">Startup Founders</span>
             </h1>
             
             <p className="text-lg md:text-xl text-foreground/70 mb-10 max-w-2xl mx-auto">
-              EnAccelerator is the premier student startup incubator at the University of Melbourne, 
-              helping ambitious students turn innovative ideas into sustainable businesses.
+              EnAccelerator is the premier student-run startup incubator at the University of Melbourne, 
+              helping students from all backgrounds build their own startup.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
