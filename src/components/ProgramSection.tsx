@@ -5,19 +5,19 @@ import { Card, CardContent } from '@/components/ui/card';
 const features = [
   {
     title: "Hands-on Mentorship",
-    description: "Work with experienced founders and industry professionals who guide you through your startup journey."
+    description: "Work with experienced founders and industry professionals who guide you through every step of your startup journey."
   },
   {
     title: "Workshop Series",
-    description: "Weekly skill-building sessions covering ideation, pitching, business modeling, and growth strategies."
+    description: "Weekly skill-building sessions covering all parts of the startup incubation phase."
   },
   {
-    title: "Funding Opportunities",
-    description: "Access to seed funding and connections to angel investors and venture capital networks."
+    title: "Dedicated Cohort",
+    description: "Work with a cohort of 16 student founders, with the same drive and passion to bulid as you."
   },
   {
-    title: "Coworking Space",
-    description: "Dedicated workspace on campus to collaborate with fellow founders and mentors."
+    title: "Open To All Skill Levels",
+    description: "Never built a startup before? No problem - learn everything you need to know about building a startup."
   },
   {
     title: "Network Building",
@@ -25,7 +25,7 @@ const features = [
   },
   {
     title: "Demo Day",
-    description: "Showcase your startup to investors, industry leaders, and the university community."
+    description: "Showcase your startup to other startup founders, industry leaders, and the university community."
   }
 ];
 
