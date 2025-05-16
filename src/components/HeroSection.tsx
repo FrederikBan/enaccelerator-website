@@ -40,21 +40,21 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-20 pt-10 border-t">
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <p className="text-4xl font-bold text-brand-yellow">12+</p>
-              <p className="text-sm text-foreground/70">Startups Launched</p>
+              <p className="text-4xl font-bold text-brand-yellow">20+</p>
+              <p className="text-sm text-foreground/70">Student Founders</p>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <p className="text-4xl font-bold text-brand-yellow">80%</p>
-              <p className="text-sm text-foreground/70">Success Rate</p>
+              <p className="text-4xl font-bold text-brand-yellow">10+</p>
+              <p className="text-sm text-foreground/70">Startups Launched</p>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <p className="text-4xl font-bold text-brand-yellow">15+</p>
-              <p className="text-sm text-foreground/70">Industry Mentors</p>
+              <p className="text-4xl font-bold text-brand-yellow">2024</p>
+              <p className="text-sm text-foreground/70">Launched In</p>
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            /*<div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <p className="text-4xl font-bold text-brand-yellow">$50K</p>
               <p className="text-sm text-foreground/70">Funding Available</p>
-            </div>
+            </div>*/
           </div>
         </div>
       </div>
