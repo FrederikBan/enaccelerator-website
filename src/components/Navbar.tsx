@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 bg-brand-yellow rounded-md"></div>
+          <img src="/public/logos/SVG/Icon Square Inverted SVG.svg" alt="EnAccelerator Logo" className="h-8 w-8 object-contain" />
           <span className="font-bold text-lg">EnAccelerator</span>
         </Link>
 
