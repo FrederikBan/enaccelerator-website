@@ -51,10 +51,10 @@ const HeroSection = () => {
               <p className="text-4xl font-bold text-brand-yellow">2024</p>
               <p className="text-sm text-foreground/70">Launched In</p>
             </div>
-            /*<div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            {/*<div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <p className="text-4xl font-bold text-brand-yellow">$50K</p>
               <p className="text-sm text-foreground/70">Funding Available</p>
-            </div>*/
+            </div>*/}
           </div>
         </div>
       </div>
