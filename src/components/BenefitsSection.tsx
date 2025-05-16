@@ -3,12 +3,12 @@ import React from 'react';
 
 const benefits = [
   {
-    title: "Expert Mentorship",
+    title: "Real People, Real Experts",
     description: "Gain guidance from experienced entrepreneurs and industry professionals who've been there before."
   },
   {
-    title: "Funding Access",
-    description: "Connect with potential investors and access seed funding opportunities to get your startup off the ground."
+    title: "Authentic & Offline",
+    description: "EnAccelerator has an emphasis on in-person interactions and bonding; no more learning over boring online conference calls."
   },
   {
     title: "Skill Building",
@@ -16,7 +16,7 @@ const benefits = [
   },
   {
     title: "Community",
-    description: "Join a supportive network of like-minded student founders who understand your journey."
+    description: "Join a supportive network of like-minded student founders who understand your journey and have the same goals as you."
   }
 ];
 
