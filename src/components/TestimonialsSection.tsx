@@ -4,11 +4,11 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const testimonials = [
   {
-    quote: "EnAccelerator gave me the structure, mentorship, and connections I needed to transform my idea into a viable startup. The hands-on guidance was invaluable.",
-    name: "Sarah Chen",
-    role: "Founder, EcoTech Solutions",
-    batch: "2023 Cohort"
-  },
+    quote: "“The program’s pretty great, and is quite unique to anything in university I’ve done before so I really love it. For me, I’ve enjoyed how the program is structured to be hands-on and I can’t wait to continue working with my group.” ",
+    name: "Prem Titus",
+    role: "Student Founder",
+    batch: "2024 Semester 2 Cohort"
+  }{/*,
   {
     quote: "From ideation to our first funding round, the EnAccelerator team was there every step of the way. The network we built through the program continues to open doors for us.",
     name: "Michael Wong",
@@ -20,7 +20,7 @@ const testimonials = [
     name: "Priya Sharma",
     role: "CEO, LearnLoop",
     batch: "2023 Cohort"
-  }
+  }*/}
 ];
 
 const TestimonialsSection = () => {
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6">Success <span className="text-brand-yellow">Stories</span></h2>
           <p className="text-lg text-foreground/70">
-            Hear from founders who transformed their ideas into thriving startups through our program.
+            Hear from student founders who transformed their ideas into startups through our program.
           </p>
         </div>
         
