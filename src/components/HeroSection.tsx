@@ -186,9 +186,9 @@ const HeroSection = () => {
             </div>
           </motion.div>*/}
           
-          {/* Stats */}
+          {/* Stats - Now centered */}
           <motion.div 
-            className="grid grid-cols-2 sm:grid-cols-3 gap-5 mt-20 pt-10 border-t border-white/10"
+            className="flex flex-col items-center mt-20 pt-10 border-t border-white/10"
             variants={{
               hidden: { opacity: 0 },
               visible: { 
@@ -202,47 +202,52 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
           >
-            <motion.div 
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-              }}
-            >
-              <motion.p 
-                className="text-4xl font-bold text-brand-yellow"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-              >20+</motion.p>
-              <p className="text-sm text-foreground/70">Student Founders</p>
-            </motion.div>
-            
-            <motion.div 
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-              }}
-            >
-              <motion.p 
-                className="text-4xl font-bold text-brand-yellow"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", delay: 0.3 }}
-              >10+</motion.p>
-              <p className="text-sm text-foreground/70">Startups Launched</p>
-            </motion.div>
-            
-            <motion.div 
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-              }}
-            >
-              <motion.p 
-                className="text-4xl font-bold text-brand-yellow"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", delay: 0.6 }}
-              >2024</motion.p>
-              <p className="text-sm text-foreground/70">Launched In</p>
-            </motion.div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 w-full max-w-lg mx-auto text-center">
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                }}
+                className="flex flex-col items-center"
+              >
+                <motion.p 
+                  className="text-4xl font-bold text-brand-yellow"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+                >20+</motion.p>
+                <p className="text-sm text-foreground/70">Student Founders</p>
+              </motion.div>
+              
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                }}
+                className="flex flex-col items-center"
+              >
+                <motion.p 
+                  className="text-4xl font-bold text-brand-yellow"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", delay: 0.3 }}
+                >10+</motion.p>
+                <p className="text-sm text-foreground/70">Startups Launched</p>
+              </motion.div>
+              
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                }}
+                className="flex flex-col items-center"
+              >
+                <motion.p 
+                  className="text-4xl font-bold text-brand-yellow"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", delay: 0.6 }}
+                >2024</motion.p>
+                <p className="text-sm text-foreground/70">Launched In</p>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </motion.div>

@@ -72,12 +72,12 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Fixed issue with display on mobile */}
       <div className={cn(
-        "md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden",
-        isMobileMenuOpen ? "max-h-64 py-4" : "max-h-0"
+        "md:hidden fixed left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-in-out",
+        isMobileMenuOpen ? "top-[calc(var(--header-height,_60px))] max-h-[calc(100vh-var(--header-height,_60px))] overflow-auto" : "-top-[100vh]"
       )}>
-        <div className="container flex flex-col space-y-4">
+        <div className="container flex flex-col space-y-4 py-4">
           <a 
             href="#program" 
             className="py-2 px-4 text-foreground/80 hover:text-foreground"
@@ -106,13 +106,15 @@ const Navbar = () => {
           >
             Testimonials
           </a>
-          <Button 
-            className="bg-brand-yellow text-black hover:bg-brand-yellow/90 mx-4"
-            onClick={() => setIsMobileMenuOpen(false)}
-            asChild
-          >
-            <Link to="/apply">Apply Now</Link>
-          </Button>
+          <div className="px-4 pt-2">
+            <Button 
+              className="bg-brand-yellow text-black hover:bg-brand-yellow/90 w-full"
+              onClick={() => setIsMobileMenuOpen(false)}
+              asChild
+            >
+              <Link to="/apply">Apply Now</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
