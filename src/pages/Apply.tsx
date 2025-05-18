@@ -23,11 +23,6 @@ const Apply = () => {
       <Navbar />
       
       <main className="container py-8 md:py-16">
-        {/* Back to Home Button */}
-        <Link to="/" className="flex items-center text-sm mb-8 hover:text-brand-yellow transition-colors">
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
-        </Link>
 
         {/* Page Header */}
         <div className="max-w-3xl mx-auto mb-12">
