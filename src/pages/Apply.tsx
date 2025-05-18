@@ -22,7 +22,7 @@ const Apply = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container py-8 md:py-16">
+      <main className="container pt-12 pb-8 md:py-16">
 
         {/* Page Header */}
         <div className="max-w-3xl mx-auto mb-12">
