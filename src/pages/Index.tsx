@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProgramSection from '@/components/ProgramSection';
@@ -21,21 +22,29 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      
-      <main>
-        <HeroSection />
-        <LogoCarousel />
-        <ProgramSection />
-        <TimelineSection />
-        <BenefitsSection />
-        <TestimonialsSection />
-        <SignupSection />
-      </main>
-      
-      <Footer />
-    </div>
+    <AnimatePresence mode="wait">
+      <motion.div 
+        className="min-h-screen"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Navbar />
+        
+        <main>
+          <HeroSection />
+          <LogoCarousel />
+          <ProgramSection />
+          <TimelineSection />
+          <BenefitsSection />
+          <TestimonialsSection />
+          <SignupSection />
+        </main>
+        
+        <Footer />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
