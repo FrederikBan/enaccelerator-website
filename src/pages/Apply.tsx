@@ -25,7 +25,7 @@ const Apply = () => {
       <main className="container pt-12 pb-8 md:py-16">
 
         {/* Page Header */}
-        <div className="max-w-3xl mx-auto mb-12">
+        <div className="max-w-3xl mx-auto mb-12 mt-8">
           <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-6">
             Applications Open
           </span>
