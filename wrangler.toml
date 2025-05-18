@@ -1,0 +1,19 @@
+
+name = "en-accelerator"
+
+[site]
+bucket = "./dist"
+include = ["**/*"]
+exclude = []
+
+[build]
+command = "npm run build"
+output_dir = "dist"
+
+[build.upload]
+format = "directory"
+
+[env.production]
+workers_dev = false
+routes = ["*/*"]
+zone_id = ""
