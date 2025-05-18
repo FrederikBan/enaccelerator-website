@@ -44,17 +44,16 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div className="md:col-span-8">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
               <div>
                 <h3 className="font-bold mb-4">Program</h3>
                 <ul className="space-y-2">
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">About</a></li>
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Timeline</a></li>
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Apply</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">FAQ</a></li>
                 </ul>
               </div>
-              <div>
+              {/*<div>
                 <h3 className="font-bold mb-4">Resources</h3>
                 <ul className="space-y-2">
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Startup Guide</a></li>
@@ -62,22 +61,18 @@ const Footer = () => {
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Mentors</a></li>
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Blog</a></li>
                 </ul>
-              </div>
+              </div>*/}
               <div>
                 <h3 className="font-bold mb-4">Company</h3>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Enactus Melbourne</a></li>
+                  <li><a href="https://enactusmelbourne.com/" target="_blank" className="text-foreground/70 hover:text-brand-yellow transition-colors">Enactus Melbourne</a></li>
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Team</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Partners</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Careers</a></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-bold mb-4">Contact</h3>
                 <ul className="space-y-2">
                   <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Email Us</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Support</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Visit</a></li>
                 </ul>
               </div>
             </div>
@@ -88,10 +83,6 @@ const Footer = () => {
           <p className="text-sm text-foreground/60">
             © {currentYear} EnAccelerator. All rights reserved.
           </p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-foreground/60 hover:text-brand-yellow">Privacy Policy</a>
-            <a href="#" className="text-sm text-foreground/60 hover:text-brand-yellow">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>
