@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: ""The program's pretty great, and is quite unique to anything in university I've done before so I really love it. For me, I've enjoyed how the program is structured to be hands-on and I can't wait to continue working with my group." ",
+    quote: ""The program's pretty great, and is quite unique to anything in university I've done before so I really love it. For me, I've enjoyed how the program is structured to be hands-on and I can't wait to continue working with my group."",
     name: "Prem Titus",
     role: "Student Founder",
     batch: "2024 Semester 2 Cohort"
