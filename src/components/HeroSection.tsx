@@ -40,7 +40,7 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden" ref={heroRef}>
-      {/* Interactive Background Elements */}
+      {/* Enhanced Interactive Background Elements */}
       <div className="absolute top-20 right-20 h-64 w-64 bg-brand-yellow/20 rounded-full blur-3xl -z-10 animate-pulse"
           style={{
             transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * 0.01}px)`,
@@ -49,6 +49,28 @@ const HeroSection = () => {
           style={{
             transform: `translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px)`,
           }}></div>
+      
+      {/* New decorative elements */}
+      <div className="absolute top-1/4 left-[5%] w-8 h-8 rotate-45 border-2 border-brand-yellow/30 animate-spin-slow"></div>
+      <div className="absolute bottom-1/4 right-[10%] w-4 h-4 bg-brand-yellow/20 rounded-full animate-bounce-soft"></div>
+      <div className="absolute top-[15%] right-[15%] w-6 h-6 bg-brand-yellow/30 rounded-full animate-pulse-slow"></div>
+      <div className="absolute bottom-[20%] left-[20%] w-12 h-12 border border-brand-yellow/20 rounded-full animate-pulse-slow"></div>
+      
+      {/* Main floating logo */}
+      <motion.div 
+        className="absolute right-[5%] top-[20%] w-48 h-48 opacity-10 hidden lg:block"
+        animate={{
+          y: [0, -10, 0],
+          rotate: [0, 5, 0],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        <img src="/logos/SVG/Logo Yellow SVG.svg" alt="EnAccelerator Logo" className="w-full h-full" />
+      </motion.div>
       
       <motion.div 
         className="container relative z-10"
@@ -73,7 +95,7 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.h1 
-            className="mb-6 relative"
+            className="mb-6 relative text-4xl md:text-5xl lg:text-6xl font-heading font-bold"
             variants={fadeInUp}
             custom={1}
           >
@@ -120,6 +142,48 @@ const HeroSection = () => {
             >
               <a href="#program">Learn More</a>
             </Button>
+          </motion.div>
+          
+          {/* New: Featured highlights */}
+          <motion.div 
+            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto"
+            variants={fadeInUp}
+            custom={4}
+          >
+            <div className="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-brand-yellow/30 transition-all">
+              <div className="w-12 h-12 bg-brand-yellow/10 rounded-full flex items-center justify-center mb-3 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-yellow">
+                  <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path>
+                  <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2Z"></path>
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-1 text-center">Mentorship</h3>
+              <p className="text-sm text-center text-foreground/70">Access industry experts and successful founders</p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-brand-yellow/30 transition-all">
+              <div className="w-12 h-12 bg-brand-yellow/10 rounded-full flex items-center justify-center mb-3 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-yellow">
+                  <path d="M12 6v12"></path>
+                  <path d="M6 12h12"></path>
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-1 text-center">Resources</h3>
+              <p className="text-sm text-center text-foreground/70">Technology, workspace, and funding opportunities</p>
+            </div>
+            
+            <div className="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10 hover:border-brand-yellow/30 transition-all">
+              <div className="w-12 h-12 bg-brand-yellow/10 rounded-full flex items-center justify-center mb-3 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-yellow">
+                  <path d="M17 11h1a3 3 0 0 1 0 6h-1"></path>
+                  <path d="M9 12v6"></path>
+                  <path d="M13 12v6"></path>
+                  <path d="M14 7V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path>
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-1 text-center">Community</h3>
+              <p className="text-sm text-center text-foreground/70">Connect with like-minded student entrepreneurs</p>
+            </div>
           </motion.div>
           
           {/* Stats */}
