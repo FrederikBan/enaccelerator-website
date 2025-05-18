@@ -144,7 +144,7 @@ const HeroSection = () => {
             </Button>
           </motion.div>
           
-          {/* New: Featured highlights */}
+          {/* New: Featured highlights 
           <motion.div 
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto"
             variants={fadeInUp}
@@ -184,7 +184,7 @@ const HeroSection = () => {
               <h3 className="text-lg font-semibold mb-1 text-center">Community</h3>
               <p className="text-sm text-center text-foreground/70">Connect with like-minded student entrepreneurs</p>
             </div>
-          </motion.div>
+          </motion.div>*/}
           
           {/* Stats */}
           <motion.div 
