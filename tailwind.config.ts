@@ -127,8 +127,8 @@ export default {
 				"spin-slow": "spin-slow 8s linear infinite"
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				heading: ['Space Grotesk', 'sans-serif'],
+				sans: ['Poppins', 'sans-serif'],
+				heading: ['Manrope', 'sans-serif'],
 			},
 			boxShadow: {
 				'glow': '0 0 20px rgba(255, 194, 34, 0.2)',
