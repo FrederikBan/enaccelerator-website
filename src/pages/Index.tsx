@@ -7,6 +7,7 @@ import ProgramSection from '@/components/ProgramSection';
 import TimelineSection from '@/components/TimelineSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import TeamSection from '@/components/TeamSection';
 import SignupSection from '@/components/SignupSection';
 import LogoCarousel from '@/components/LogoCarousel';
 import Footer from '@/components/Footer';
@@ -38,6 +39,7 @@ const Index = () => {
           <ProgramSection />
           <TimelineSection />
           <BenefitsSection />
+          <TeamSection />
           <TestimonialsSection />
           <SignupSection />
         </main>
