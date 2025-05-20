@@ -23,7 +23,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
   const sizeClasses = {
     sm: 'max-w-[220px]',
     md: 'max-w-[300px]',
-    lg: 'max-w-[380px]'
+    lg: 'max-w-[1500px]'
   };
   
   return (
