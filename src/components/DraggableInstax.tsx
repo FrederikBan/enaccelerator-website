@@ -16,7 +16,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
   imageSrc, 
   caption, 
   rotation = 0,
-  size = 'lg'
+  size = 'md'
 }) => {
   const [isDragging, setIsDragging] = useState(false);
   const isMobile = useIsMobile();
@@ -24,8 +24,8 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
   // Size mapping with more responsive sizing
   const sizeClasses = {
     sm: 'max-w-[180px] md:max-w-[220px]',
-    md: 'max-w-[220px] md:max-w-[400px]',
-    lg: 'max-w-[260px] md:max-w-[600px]'
+    md: 'max-w-[220px] md:max-w-[320px]',
+    lg: 'max-w-[260px] md:max-w-[380px]'
   };
   
   return (
