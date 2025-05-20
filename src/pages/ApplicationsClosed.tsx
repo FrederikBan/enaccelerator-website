@@ -25,7 +25,7 @@ const ApplicationsClosed = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container py-12 md:py-16">
+      <main className="container py-12 pb-8 md:py-16">
 
         <div className="relative">
           {/* Instax Photos - Left Side (hidden on mobile) */}
