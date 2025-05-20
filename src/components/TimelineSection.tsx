@@ -16,19 +16,19 @@ const timelineItems = [
     color: "bg-brand-yellow/90"
   },
   {
-    week: 3,
+    week: "3",
     title: "Key Customer",
     description: "Learn how to build customer profiles and understand their needs.",
     color: "bg-brand-yellow/80"
   },
   {
-    week: 4,
+    week: "4",
     title: "Customer Validation",
     description: "Learn how to recognise when a problem exists and when to start building a solution.",
     color: "bg-brand-yellow/70"
   },
   {
-    week: 5,
+    week: "5",
     title: "Prototyping",
     description: "Learn how to transform customer needs into a solution, and how to go about building one.",
     color: "bg-brand-yellow/60"
@@ -40,13 +40,13 @@ const timelineItems = [
     color: "bg-brand-yellow/50"
   },
   {
-    week: 9,
+    week: "9",
     title: "Pitching",
     description: "Learn how to develop a pitch deck and sell the story of your solution.",
     color: "bg-brand-yellow/40"
   },
   {
-    week: 10,
+    week: "10",
     title: "Demo Day",
     description: "Present your startup to fellow founders, mentors, and the university community.",
     color: "bg-brand-yellow/30"
@@ -141,12 +141,11 @@ const TimelineSection = () => {
                   <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-brand-yellow transition-all duration-500 ease-out" 
-                      style={{ width: `${(activeItem + 1) * 10}%` }}
+                      style={{ width: `${(activeItem + 1) * 12.5}%` }}
                     ></div>
                   </div>
                   <div className="flex justify-between mt-3 text-xs text-foreground/70">
                     <span>Start</span>
-                    <span>Week {activeItem + 1}</span>
                     <span>Demo Day</span>
                   </div>
                 </div>
