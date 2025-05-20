@@ -38,7 +38,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
       initial={{ rotate: rotation }}
       whileHover={{ rotate: 0, transition: { duration: 0.3 } }}
       className={cn(
-        "relative cursor-grab active:cursor-grabbing",
+        "relative w-full cursor-grab active:cursor-grabbing",
         sizeClasses[size],
         isDragging ? "z-50" : "z-10"
       )}
