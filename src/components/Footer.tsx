@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo and Tagline */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 bg-brand-yellow rounded-md"></div>
+                <img src="/logos/SVG/icon-square-inverted-svg.svg" alt="EnAccelerator Logo" className="h-8 w-8 object-contain" />
               <span className="font-bold text-lg">EnAccelerator</span>
             </div>
             <p className="text-foreground/70 mb-6">
