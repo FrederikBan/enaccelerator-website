@@ -31,7 +31,7 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/enaccelerator" className="h-10 w-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-brand-yellow hover:text-black transition-colors">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5c3.176 0 5.75-2.574 5.75-5.75v-8.5C22 4.574 19.426 2 16.25 2h-8.5ZM12 7.25A4.75 4.75 0 1 1 7.25 12 4.755 4.755 0 0 1 12 7.25Zm0 1.5a3.25 3.25 0 1 0 3.25 3.25A3.254 3.254 0 0 0 12 8.75ZM17.5 6.75a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z" />                
+                  <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5c3.176 0 5.75-2.574 5.75-5.75v-8.5C22 4.574 19.426 2 16.25 2h-8.5ZM12 7.25A4.75 4.75 0 1 1 7.25 12 4.755 4.755 0 0 1 12 7.25Zm0 1.5a3.25 3.25 0 1 0 3.25 3.25A3.254 3.254 0 0 0 12 8.75ZM17.5 6.75a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z" fill="currentColor" />                
                 </svg>
               </a>
               {/*<a href="#" className="h-10 w-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-brand-yellow hover:text-black transition-colors">
