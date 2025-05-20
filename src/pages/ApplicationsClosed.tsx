@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -40,7 +41,7 @@ const ApplicationsClosed = () => {
           )}
 
           {/* Page Header */}
-          <div className="max-w-3xl mx-auto mb-12">
+          <div className="max-w-3xl mx-auto mb-8">
             <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-6">
               Applications Closed
             </span>
@@ -52,12 +53,12 @@ const ApplicationsClosed = () => {
 
           {/* Mobile Instax Photo - Only shown on mobile */}
           {isMobile && (
-            <div className="mb-12 mx-auto max-w-[280px]">
+            <div className="mb-8 mx-auto max-w-[280px]">
               <DraggableInstax 
                 imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
                 caption="Cohort 2025"
                 rotation={2}
-                size="md"
+                size="lg"
               />
             </div>
           )}
@@ -76,7 +77,7 @@ const ApplicationsClosed = () => {
         </div>
         
         {/* Next Cohort Information */}
-        <section className="mb-12">
+        <section className="mb-8">
           <div className="bg-muted/30 p-8 rounded-lg border border-border text-center max-w-3xl mx-auto">
             <h2 className="mb-6">Next Application Cycle</h2>
             <div className="inline-block bg-brand-yellow/10 px-6 py-4 rounded-lg mb-8">
@@ -94,7 +95,7 @@ const ApplicationsClosed = () => {
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-12">
+        <section className="mb-8">
           <h2 className="mb-6">Eligibility</h2>
           
           <div className="bg-muted/30 p-8 rounded-lg border border-border">

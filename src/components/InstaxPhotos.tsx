@@ -21,7 +21,7 @@ const InstaxPhotos: React.FC<InstaxPhotosProps> = ({ photos }) => {
   const photosToDisplay = isMobile ? [photos[0]] : photos;
   
   return (
-    <div className={`mb-12 grid grid-cols-1 ${isMobile ? '' : 'md:grid-cols-3'} gap-8`}>
+    <div className="mb-8 flex flex-wrap justify-center gap-8">
       {photosToDisplay.map((photo, index) => (
         <div 
           className="animate-fade-in" 
