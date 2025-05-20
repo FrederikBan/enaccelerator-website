@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const timelineItems = [
   {
-    week: 1,
+    week: "1",
     title: "Induction & Introduction",
     description: "Meet your cohort of fellow founders, and learn about the program, and get an introduction to start-ups.",
     color: "bg-brand-yellow"
