@@ -62,7 +62,7 @@ const TimelineSection = () => {
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6">Your <span className="text-brand-yellow">10-Week</span> Journey</h2>
           <p className="text-lg text-foreground/70">
-            Follow our proven roadmap from ideation to launch, with dedicated support at every step.
+            Follow our program from ideation to launch, with tailored support every step of the way.
           </p>
         </div>
         

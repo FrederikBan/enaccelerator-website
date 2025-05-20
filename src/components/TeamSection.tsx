@@ -9,45 +9,50 @@ type TeamMember = {
   role: string;
   bio: string;
   imageUrl?: string;
-  email: string;
+  email?: string;
   linkedin?: string;
 };
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Dr. Sarah Chen",
-    role: "Program Director",
-    bio: "Former startup founder with 10+ years of experience mentoring early-stage companies. PhD in Business Innovation from Stanford.",
-    email: "sarah@enaccelerator.com",
-    linkedin: "https://linkedin.com/in/sarahchen",
+    name: "Kayson Wang",
+    role: "Founder",
+    bio: "Investments @ NextGen Ventures | Finance / Accounting @ Unimelb",
+    imageUrl: "images/team_images/kayson.jpg",
+    email: "kaysonwang2004@gmail.com",
+    linkedin: "https://www.linkedin.com/in/kayson-wang-582538247",
   },
   {
-    name: "Michael Rodriguez",
-    role: "Investment Lead",
-    bio: "Venture capitalist with experience at Sequoia and Y Combinator. Helped secure funding for 30+ student startups.",
-    email: "michael@enaccelerator.com",
-    linkedin: "https://linkedin.com/in/michaelrodriguez",
+    name: "Kelly Choy",
+    role: "Program Coordinator",
+    bio: "Educator | Event Coordinator | Graphic Designer | Interest in Social Impact and Not-For-Profit Sectors",
+    imageUrl: "images/team_images/kelly.jpg",
+    email: "ckyk97@gmail.com",
+    linkedin: "https://www.linkedin.com/in/kellychoy11291997",
   },
   {
-    name: "Priya Sharma",
-    role: "Technical Mentor",
-    bio: "Former CTO at TechStars. Expert in helping founders build MVPs and scale their technical infrastructure.",
-    email: "priya@enaccelerator.com",
-    linkedin: "https://linkedin.com/in/priyasharma",
+    name: "Nathan Pham",
+    role: "Program Coordinator",
+    bio: "Data Science at The University of Melbourne",
+    imageUrl: "images/team_images/nathan.jpg",
+    email: "hi@nathanlepham.com",
+    linkedin: "https://www.linkedin.com/in/nathan-pham-2a2a51264",
   },
   {
-    name: "James Wilson",
-    role: "Entrepreneur in Residence",
-    bio: "Serial entrepreneur who has founded 3 successful startups. Passionate about helping students bring their ideas to life.",
+    name: "Alexander Choong",
+    role: "Program Associate",
+    bio: "Student at The University of Melbourne",
+    imageUrl: "images/team_images/alex.jpg",
     email: "james@enaccelerator.com",
-    linkedin: "https://linkedin.com/in/jameswilson",
+    linkedin: "https://www.linkedin.com/in/alexander-choong-524420237",
   },
   {
-    name: "Alex Torres",
-    role: "Community Manager",
-    bio: "Experienced in building founder communities and organizing startup events. Previously ran accelerator programs at Berkeley.",
+    name: "Jessica Chung",
+    role: "Program Associate",
+    bio: "Doctor of Medicine (MD2) Student at the University of Melbourne",
+    imageUrl: "images/team_images/jessica.jpg",
     email: "alex@enaccelerator.com",
-    linkedin: "https://linkedin.com/in/alextorres",
+    linkedin: "https://www.linkedin.com/in/jessica-chung721",
   }
 ];
 
