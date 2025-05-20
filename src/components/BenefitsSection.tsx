@@ -143,24 +143,26 @@ const BenefitsSection = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <motion.div 
-                    className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg h-full p-4 flex items-center justify-center"
+                    className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg h-full p-4 flex items-center justify-center overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
-                    <motion.div 
-                      className="w-12 h-12 bg-brand-yellow/40 rounded-full"
-                      animate={{ 
-                        y: [0, -5, 0], 
-                        rotate: [0, 5, 0] 
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
+                    <img
+                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                      alt="Founders collaborating"
+                      className="object-cover w-full h-full rounded-md"
                     />
                   </motion.div>
                   
                   <motion.div 
-                    className="bg-white/5 backdrop-blur-sm rounded-lg h-full p-4"
+                    className="bg-white/5 backdrop-blur-sm rounded-lg h-full p-4 overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
-                    <p className="text-white/80 text-sm">Join a community of founders driven by innovation</p>
+                    <img
+                      src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                      alt="Tech innovation"
+                      className="object-cover w-full h-full rounded-md"
+                    />
+                    <p className="text-white/80 text-sm absolute bottom-3 left-3 bg-black/60 p-2 rounded">Join a community of founders driven by innovation</p>
                   </motion.div>
                 </motion.div>
                 
@@ -171,22 +173,25 @@ const BenefitsSection = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <motion.div 
-                    className="bg-white/5 backdrop-blur-sm rounded-lg h-2/5 p-4"
+                    className="bg-white/5 backdrop-blur-sm rounded-lg h-2/5 p-4 overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
-                    <p className="text-white/80 text-sm">Learn by doing</p>
+                    <img
+                      src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+                      alt="Hands-on learning"
+                      className="object-cover w-full h-full rounded-md"
+                    />
+                    <p className="text-white/80 text-sm absolute bottom-3 left-3 bg-black/60 p-2 rounded">Learn by doing</p>
                   </motion.div>
                   
                   <motion.div 
                     className="bg-brand-yellow/10 backdrop-blur-sm rounded-lg h-3/5 p-4 relative overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
-                    <motion.div 
-                      className="absolute -right-4 -bottom-4 w-20 h-20 bg-brand-yellow/20 rounded-full"
-                      animate={{ 
-                        scale: [1, 1.2, 1], 
-                      }}
-                      transition={{ duration: 5, repeat: Infinity }}
+                    <img
+                      src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                      alt="Collaborative environment"
+                      className="object-cover w-full h-full rounded-md"
                     />
                   </motion.div>
                 </motion.div>

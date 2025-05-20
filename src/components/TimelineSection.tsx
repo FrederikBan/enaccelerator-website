@@ -78,7 +78,7 @@ const TimelineSection = () => {
                   }`}
                   onClick={() => setActiveItem(index)}
                 >
-                  <div className={`h-8 w-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                  <div className={`h-10 w-10 rounded-full flex items-center justify-center text-sm font-bold ${
                     activeItem === index ? 'bg-black text-brand-yellow' : 'bg-brand-yellow text-black'
                   }`}>
                     {item.week}
