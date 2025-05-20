@@ -96,7 +96,7 @@ const BenefitsSection = () => {
               >EnAccelerator</motion.span>?
             </h2>
             <p className="text-lg text-white/70 mb-8">
-              We provide everything you need to transform your idea into a viable business, from expert guidance to funding opportunities.
+              We provide everything you need to transform your idea into a your very own start-up.
             </p>
             
             <motion.div 
