@@ -10,7 +10,7 @@ const timelineItems = [
     color: "bg-brand-yellow"
   },
   {
-    week: 2,
+    week: "2",
     title: "Problem Space",
     description: "Learn about what a Problem Space is, why choosing the right one is important and how to go about it.",
     color: "bg-brand-yellow/90"
@@ -34,7 +34,7 @@ const timelineItems = [
     color: "bg-brand-yellow/60"
   },
   {
-    week: 6-8,
+    week: "6-8",
     title: "Building & Testing",
     description: "Get three weeks of open workshops supported by founders and industry professionals to build your MVP",
     color: "bg-brand-yellow/50"
