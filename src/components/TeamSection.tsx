@@ -43,7 +43,7 @@ const teamMembers: TeamMember[] = [
     role: "Program Associate",
     bio: "Student at The University of Melbourne",
     imageUrl: "images/team_images/alex.jpg",
-    email: "james@enaccelerator.com",
+    email: "alexchoong2005@gmail.com",
     linkedin: "https://www.linkedin.com/in/alexander-choong-524420237",
   },
   {
@@ -51,7 +51,7 @@ const teamMembers: TeamMember[] = [
     role: "Program Associate",
     bio: "Doctor of Medicine (MD2) Student at the University of Melbourne",
     imageUrl: "images/team_images/jessica.jpg",
-    email: "alex@enaccelerator.com",
+    /*email: "alex@enaccelerator.com",*/
     linkedin: "https://www.linkedin.com/in/jessica-chung721",
   }
 ];
