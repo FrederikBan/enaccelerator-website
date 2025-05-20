@@ -5,63 +5,51 @@ import { Card, CardContent } from '@/components/ui/card';
 const timelineItems = [
   {
     week: 1,
-    title: "Ideation & Team Formation",
-    description: "Explore problem spaces, validate ideas through customer discovery, and form complementary founding teams.",
+    title: "Induction & Introduction",
+    description: "Meet your cohort of fellow founders, and learn about the program, and get an introduction to start-ups.",
     color: "bg-brand-yellow"
   },
   {
     week: 2,
-    title: "Value Proposition Design",
-    description: "Define your solution, target market, and unique value proposition with expert guidance.",
+    title: "Problem Space",
+    description: "Learn about what a Problem Space is, why choosing the right one is important and how to go about it.",
     color: "bg-brand-yellow/90"
   },
   {
     week: 3,
-    title: "Business Model Canvas",
-    description: "Develop a comprehensive business model and refine your market strategy.",
+    title: "Key Customer",
+    description: "Learn how to build customer profiles and understand their needs.",
     color: "bg-brand-yellow/80"
   },
   {
     week: 4,
-    title: "MVP Development",
-    description: "Build a minimum viable product to test your core assumptions with real users.",
+    title: "Customer Validation",
+    description: "Learn how to recognise when a problem exists and when to start building a solution.",
     color: "bg-brand-yellow/70"
   },
   {
     week: 5,
-    title: "Customer Validation",
-    description: "Collect feedback from early adopters and refine your product offering.",
+    title: "Prototyping",
+    description: "Learn how to transform customer needs into a solution, and how to go about building one.",
     color: "bg-brand-yellow/60"
   },
   {
-    week: 6,
-    title: "Growth Strategies",
-    description: "Learn sustainable user acquisition channels and marketing strategies.",
+    week: 6-8,
+    title: "Building & Testing",
+    description: "Get three weeks of open workshops supported by founders and industry professionals to build your MVP",
     color: "bg-brand-yellow/50"
   },
   {
-    week: 7,
-    title: "Financial Modeling",
-    description: "Develop revenue forecasts, cost structures, and funding requirements.",
-    color: "bg-brand-yellow/40"
-  },
-  {
-    week: 8,
-    title: "Pitch Preparation",
-    description: "Craft a compelling pitch deck and refine your presentation skills.",
-    color: "bg-brand-yellow/30"
-  },
-  {
     week: 9,
-    title: "Legal & Operations Setup",
-    description: "Set up your business structure and understand key legal considerations.",
-    color: "bg-brand-yellow/20"
+    title: "Pitching",
+    description: "Learn how to develop a pitch deck and sell the story of your solution.",
+    color: "bg-brand-yellow/40"
   },
   {
     week: 10,
     title: "Demo Day",
-    description: "Present your startup to investors, mentors, and the university community.",
-    color: "bg-brand-yellow/10"
+    description: "Present your startup to fellow founders, mentors, and the university community.",
+    color: "bg-brand-yellow/30"
   }
 ];
 
