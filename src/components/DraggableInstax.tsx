@@ -16,7 +16,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
   imageSrc, 
   caption, 
   rotation = 0,
-  size = 'md'
+  size = 'lg'
 }) => {
   const [isDragging, setIsDragging] = useState(false);
   const isMobile = useIsMobile();
