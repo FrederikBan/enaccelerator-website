@@ -25,12 +25,7 @@ const ApplicationsClosed = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container py-8 md:py-16">
-        {/* Back to Home Button */}
-        <Link to="/" className="flex items-center text-sm mb-8 hover:text-brand-yellow transition-colors">
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
-        </Link>
+      <main className="container py-12 md:py-16">
 
         <div className="relative">
           {/* Instax Photos - Left Side (hidden on mobile) */}
