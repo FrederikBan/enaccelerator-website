@@ -1,12 +1,11 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useIsMobile } from '@/hooks/use-mobile';
+import DraggableInstax from '@/components/DraggableInstax';
 
 const ApplicationsClosed = () => {
   const isMobile = useIsMobile();
@@ -25,22 +24,18 @@ const ApplicationsClosed = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container py-12 pb-8 md:py-16">
+      <main className="container pt-24 md:pt-32 pb-8 md:pb-16">
 
         <div className="relative">
           {/* Instax Photos - Left Side (hidden on mobile) */}
           {!isMobile && (
-            <div className="hidden md:block absolute -left-16 top-20 z-10">
-              <div className="bg-white p-2 pb-14 shadow-md rotate-[-6deg] hover:rotate-[-3deg] transition-all duration-300 mx-auto max-w-[300px]">
-                <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" 
-                    alt="Student startup session" 
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-                <div className="mt-2 text-center text-xs text-gray-600">Previous Cohort</div>
-              </div>
+            <div className="hidden md:block absolute -left-24 top-20 z-10">
+              <DraggableInstax 
+                imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+                caption="Previous Cohort"
+                rotation={-6}
+                size="lg"
+              />
             </div>
           )}
 
@@ -57,33 +52,25 @@ const ApplicationsClosed = () => {
 
           {/* Mobile Instax Photo - Only shown on mobile */}
           {isMobile && (
-            <div className="mb-12 mx-auto max-w-xs">
-              <div className="bg-white p-2 pb-14 shadow-md rotate-[2deg] hover:rotate-0 transition-all duration-300">
-                <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                    alt="Previous cohort session" 
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-                <div className="mt-2 text-center text-xs text-gray-600">Cohort 2025</div>
-              </div>
+            <div className="mb-12 mx-auto max-w-[280px]">
+              <DraggableInstax 
+                imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                caption="Cohort 2025"
+                rotation={2}
+                size="md"
+              />
             </div>
           )}
           
           {/* Instax Photos - Right Side (hidden on mobile) */}
           {!isMobile && (
-            <div className="hidden md:block absolute -right-16 top-40 z-10">
-              <div className="bg-white p-2 pb-14 shadow-md rotate-[8deg] hover:rotate-[4deg] transition-all duration-300 mx-auto max-w-[300px]">
-                <AspectRatio ratio={3/4} className="bg-gray-100 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                    alt="Previous cohort session" 
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-                <div className="mt-2 text-center text-xs text-gray-600">Cohort 2025</div>
-              </div>
+            <div className="hidden md:block absolute -right-24 top-40 z-10">
+              <DraggableInstax 
+                imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                caption="Cohort 2025"
+                rotation={8}
+                size="lg"
+              />
             </div>
           )}
         </div>

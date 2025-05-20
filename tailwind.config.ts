@@ -113,6 +113,10 @@ export default {
 				"spin-slow": {
 					"0%": { transform: "rotate(0deg)" },
 					"100%": { transform: "rotate(360deg)" }
+				},
+				"shine": {
+					"0%": { transform: "translateX(-100%)" },
+					"50%, 100%": { transform: "translateX(100%)" }
 				}
 			},
 			animation: {
@@ -124,7 +128,8 @@ export default {
 				"slide-up": "slide-up 0.6s ease-out",
 				"zoom-in": "zoom-in 0.5s ease-out",
 				"bounce-soft": "bounce-soft 3s infinite ease-in-out",
-				"spin-slow": "spin-slow 8s linear infinite"
+				"spin-slow": "spin-slow 8s linear infinite",
+				"shine": "shine 3s infinite linear"
 			},
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],
