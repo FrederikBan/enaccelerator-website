@@ -19,11 +19,11 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
 }) => {
   const [isDragging, setIsDragging] = useState(false);
   
-  // Size mapping
+  // Size mapping - increased sizes for better desktop display
   const sizeClasses = {
-    sm: 'max-w-[200px]',
-    md: 'max-w-[280px]',
-    lg: 'max-w-[350px]'
+    sm: 'max-w-[220px]',
+    md: 'max-w-[300px]',
+    lg: 'max-w-[380px]'
   };
   
   return (
@@ -41,7 +41,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
         isDragging ? "z-50" : "z-10"
       )}
     >
-      <div className="relative bg-white p-2 pb-14 shadow-md transition-all duration-300">
+      <div className="relative bg-white p-2 pb-10 shadow-md transition-all duration-300">
         {/* Shiny animation overlay */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="shiny-effect absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shine" />

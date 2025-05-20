@@ -21,45 +21,63 @@ const ApplicationsClosed = () => {
     }
   }, []);
   
+  // Define photos for this page
+  const photos = [
+    {
+      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      caption: "Previous Cohort",
+      rotation: -6
+    },
+    {
+      src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      caption: "Cohort 2025",
+      rotation: 8
+    }
+  ];
+  
   return (
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container pt-24 md:pt-32 pb-8 md:pb-16">
+      <main className="container pt-20 md:pt-28 pb-8 md:pb-16">
 
         <div className="relative">
           {/* Instax Photos - Left Side (hidden on mobile) */}
           {!isMobile && (
             <div className="hidden md:block absolute -left-24 top-20 z-10">
               <DraggableInstax 
-                imageSrc="https://images.unsplash.com/photo-1531297484001-80022131f5a1"
-                caption="Previous Cohort"
-                rotation={-6}
+                imageSrc={photos[0].src}
+                caption={photos[0].caption}
+                rotation={photos[0].rotation}
                 size="lg"
               />
             </div>
           )}
 
           {/* Page Header */}
-          <div className="max-w-3xl mx-auto mb-8">
-            <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-6">
+          <div className="max-w-3xl mx-auto mb-6">
+            <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-4">
               Applications Closed
             </span>
-            <h1 className="mb-6">EnAccelerator Applications</h1>
+            <h1 className="mb-4">EnAccelerator Applications</h1>
             <p className="text-lg text-foreground/70">
               Thank you for your interest in Melbourne's premier student startup incubator. Applications for our current cohort are now closed.
             </p>
           </div>
 
-          {/* Mobile Instax Photo - Only shown on mobile */}
+          {/* Mobile Instax Photos - Show two photos on mobile */}
           {isMobile && (
-            <div className="mb-8 mx-auto max-w-[280px]">
-              <DraggableInstax 
-                imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-                caption="Cohort 2025"
-                rotation={2}
-                size="lg"
-              />
+            <div className="mb-6 flex justify-center gap-4">
+              {photos.map((photo, index) => (
+                <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <DraggableInstax 
+                    imageSrc={photo.src}
+                    caption={photo.caption}
+                    rotation={photo.rotation}
+                    size="sm"
+                  />
+                </div>
+              ))}
             </div>
           )}
           
@@ -67,9 +85,9 @@ const ApplicationsClosed = () => {
           {!isMobile && (
             <div className="hidden md:block absolute -right-24 top-40 z-10">
               <DraggableInstax 
-                imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-                caption="Cohort 2025"
-                rotation={8}
+                imageSrc={photos[1].src}
+                caption={photos[1].caption}
+                rotation={photos[1].rotation}
                 size="lg"
               />
             </div>

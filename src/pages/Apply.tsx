@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -21,55 +22,63 @@ const Apply = () => {
     }
   }, []);
   
+  // Application photos
+  const applicationPhotos = [
+    {
+      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      alt: "Workshop Session",
+      caption: "Workshop Session #1",
+      rotation: -2
+    },
+    {
+      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      alt: "Team Presentations",
+      caption: "Team Presentations",
+      rotation: 1
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      alt: "Mentoring Session",
+      caption: "Mentoring Session",
+      rotation: 3
+    }
+  ];
+  
   return (
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container pt-24 md:pt-32 pb-8 md:pb-16">
+      <main className="container pt-20 md:pt-28 pb-8 md:pb-16">
 
         {/* Page Header */}
-        <div className="max-w-3xl mx-auto mb-8">
-          <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-6">
+        <div className="max-w-3xl mx-auto mb-6">
+          <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-4">
             Applications Open
           </span>
-          <h1 className="mb-6">Apply to the EnAccelerator Program</h1>
+          <h1 className="mb-4">Apply to the EnAccelerator Program</h1>
           <p className="text-lg text-foreground/70">
             Join Melbourne's premier student startup incubator and transform your innovative ideas into impactful businesses.
           </p>
         </div>
         
-        {/* Instax Photos Gallery */}
-        <div className="mb-8 flex flex-wrap justify-center gap-8">
-          <div className="animate-fade-in">
-            <DraggableInstax 
-              imageSrc="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
-              caption="Workshop Session #1" 
-              rotation={-2}
-              size={isMobile ? "md" : "lg"}
-            />
+        {/* Use the InstaxPhotos component to display two photos on mobile and all on desktop */}
+        <div className="mb-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            {applicationPhotos.map((photo, index) => (
+              <div 
+                className="animate-fade-in" 
+                style={{ animationDelay: `${index * 0.2}s` }}
+                key={index}
+              >
+                <DraggableInstax 
+                  imageSrc={photo.src} 
+                  caption={photo.caption} 
+                  rotation={photo.rotation}
+                  size={isMobile ? "sm" : "lg"}
+                />
+              </div>
+            ))}
           </div>
-          
-          {!isMobile && (
-            <>
-              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                <DraggableInstax 
-                  imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
-                  caption="Team Presentations" 
-                  rotation={1}
-                  size="lg"
-                />
-              </div>
-              
-              <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <DraggableInstax 
-                  imageSrc="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                  caption="Mentoring Session" 
-                  rotation={3}
-                  size="lg"
-                />
-              </div>
-            </>
-          )}
         </div>
         
         {/* Timeline Section */}

@@ -17,8 +17,8 @@ interface InstaxPhotosProps {
 const InstaxPhotos: React.FC<InstaxPhotosProps> = ({ photos }) => {
   const isMobile = useIsMobile();
   
-  // On mobile, only show the first photo
-  const photosToDisplay = isMobile ? [photos[0]] : photos;
+  // On mobile, show the first two photos
+  const photosToDisplay = isMobile ? photos.slice(0, 2) : photos;
   
   return (
     <div className="mb-8 flex flex-wrap justify-center gap-8">
