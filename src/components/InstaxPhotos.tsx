@@ -21,7 +21,7 @@ const InstaxPhotos: React.FC<InstaxPhotosProps> = ({ photos }) => {
   const photosToDisplay = isMobile ? photos.slice(0, 2) : photos;
   
   return (
-    <div className="mb-8 flex flex-wrap justify-center gap-8">
+    <div className="mb-8 flex flex-wrap justify-center gap-4 md:gap-8">
       {photosToDisplay.map((photo, index) => (
         <div 
           className="animate-fade-in" 
@@ -32,7 +32,7 @@ const InstaxPhotos: React.FC<InstaxPhotosProps> = ({ photos }) => {
             imageSrc={photo.src}
             caption={photo.caption}
             rotation={photo.rotation || (index === 0 ? -2 : index === 1 ? 1 : 3)}
-            size={isMobile ? "md" : "lg"}
+            size={isMobile ? "sm" : "lg"}
           />
         </div>
       ))}

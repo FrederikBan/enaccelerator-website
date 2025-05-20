@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface DraggableInstaxProps {
   imageSrc: string;
@@ -18,12 +19,13 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
   size = 'md'
 }) => {
   const [isDragging, setIsDragging] = useState(false);
+  const isMobile = useIsMobile();
   
-  // Size mapping - increased sizes for better desktop display
+  // Size mapping with more responsive sizing
   const sizeClasses = {
-    sm: 'max-w-[220px]',
-    md: 'max-w-[300px]',
-    lg: 'max-w-[1500px]'
+    sm: 'max-w-[180px] md:max-w-[220px]',
+    md: 'max-w-[220px] md:max-w-[320px]',
+    lg: 'max-w-[260px] md:max-w-[380px]'
   };
   
   return (
@@ -41,7 +43,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
         isDragging ? "z-50" : "z-10"
       )}
     >
-      <div className="relative bg-white p-2 pb-10 shadow-md transition-all duration-300">
+      <div className="relative bg-white p-2 pb-6 shadow-md transition-all duration-300">
         {/* Shiny animation overlay */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="shiny-effect absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shine" />
@@ -54,7 +56,7 @@ const DraggableInstax: React.FC<DraggableInstaxProps> = ({
             className="w-full h-full object-cover"
           />
         </AspectRatio>
-        <div className="mt-2 text-center text-xs text-gray-600">{caption}</div>
+        <div className="mt-1 text-center text-xs text-gray-600">{caption}</div>
       </div>
     </motion.div>
   );
