@@ -6,16 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useIsMobile } from '@/hooks/use-mobile';
-import DraggableInstax from '@/components/DraggableInstax';
+import InstaxPhotos from '@/components/InstaxPhotos';
+import InteractiveObjects from '@/components/InteractiveObjects';
 
 const ApplicationsClosed = () => {
   const isMobile = useIsMobile();
   
   useEffect(() => {
-    // Set page title
     document.title = "Applications Closed | EnAccelerator";
-    
-    // Initialize scroll reveal animation if needed
     if (window.scrollTo) {
       window.scrollTo(0, 0);
     }
@@ -25,11 +23,13 @@ const ApplicationsClosed = () => {
   const photos = [
     {
       src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      alt: "Previous Cohort",
       caption: "Previous Cohort",
       rotation: -6
     },
     {
       src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      alt: "Cohort 2025",
       caption: "Cohort 2025",
       rotation: 8
     }
@@ -39,60 +39,23 @@ const ApplicationsClosed = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container pt-20 md:pt-28 pb-8 md:pb-16">
+      <main className="container pt-20 md:pt-28 pb-8 md:pb-16 relative">
+        {/* Interactive Objects */}
+        <InteractiveObjects />
 
-        <div className="relative">
-          {/* Instax Photos - Left Side (hidden on mobile) */}
-          {!isMobile && (
-            <div className="hidden md:block absolute -left-24 top-20 z-10">
-              <DraggableInstax 
-                imageSrc={photos[0].src}
-                caption={photos[0].caption}
-                rotation={photos[0].rotation}
-                size="lg"
-              />
-            </div>
-          )}
-
-          {/* Page Header */}
-          <div className="max-w-3xl mx-auto mb-6">
-            <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-4">
-              Applications Closed
-            </span>
-            <h1 className="mb-4">EnAccelerator Applications</h1>
-            <p className="text-lg text-foreground/70">
-              Thank you for your interest in Melbourne's premier student startup incubator. Applications for our current cohort are now closed.
-            </p>
-          </div>
-
-          {/* Mobile Instax Photos - Show two photos on mobile */}
-          {isMobile && (
-            <div className="mb-6 flex justify-center gap-4">
-              {photos.map((photo, index) => (
-                <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <DraggableInstax 
-                    imageSrc={photo.src}
-                    caption={photo.caption}
-                    rotation={photo.rotation}
-                    size="sm"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-          
-          {/* Instax Photos - Right Side (hidden on mobile) */}
-          {!isMobile && (
-            <div className="hidden md:block absolute -right-24 top-40 z-10">
-              <DraggableInstax 
-                imageSrc={photos[1].src}
-                caption={photos[1].caption}
-                rotation={photos[1].rotation}
-                size="lg"
-              />
-            </div>
-          )}
+        {/* Page Header */}
+        <div className="max-w-3xl mx-auto mb-6">
+          <span className="inline-block py-1.5 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-4">
+            Applications Closed
+          </span>
+          <h1 className="mb-4">EnAccelerator Applications</h1>
+          <p className="text-lg text-foreground/70">
+            Thank you for your interest in Melbourne's premier student startup incubator. Applications for our current cohort are now closed.
+          </p>
         </div>
+
+        {/* Instax Photos */}
+        <InstaxPhotos photos={photos} />
         
         {/* Next Cohort Information */}
         <section className="mb-8">

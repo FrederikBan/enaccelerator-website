@@ -6,17 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import DraggableInstax from '@/components/DraggableInstax';
+import InstaxPhotos from '@/components/InstaxPhotos';
+import InteractiveObjects from '@/components/InteractiveObjects';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Apply = () => {
   const isMobile = useIsMobile();
   
   useEffect(() => {
-    // Set page title
     document.title = "Apply Now | EnAccelerator";
-    
-    // Initialize scroll reveal animation if needed
     if (window.scrollTo) {
       window.scrollTo(0, 0);
     }
@@ -48,7 +46,9 @@ const Apply = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container pt-20 md:pt-28 pb-8 md:pb-16">
+      <main className="container pt-20 md:pt-28 pb-8 md:pb-16 relative">
+        {/* Interactive Objects */}
+        <InteractiveObjects />
 
         {/* Page Header */}
         <div className="max-w-3xl mx-auto mb-6">
@@ -61,25 +61,8 @@ const Apply = () => {
           </p>
         </div>
         
-        {/* Use the InstaxPhotos component to display two photos on mobile and all on desktop */}
-        <div className="mb-6">
-          <div className="flex flex-wrap justify-center gap-6">
-            {applicationPhotos.map((photo, index) => (
-              <div 
-                className="animate-fade-in" 
-                style={{ animationDelay: `${index * 0.2}s` }}
-                key={index}
-              >
-                <DraggableInstax 
-                  imageSrc={photo.src} 
-                  caption={photo.caption} 
-                  rotation={photo.rotation}
-                  size={isMobile ? "sm" : "lg"}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Instax Photos */}
+        <InstaxPhotos photos={applicationPhotos} />
         
         {/* Timeline Section */}
         <section className="mb-8">
