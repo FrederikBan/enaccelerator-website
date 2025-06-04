@@ -1,38 +1,24 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
-} from '@/components/ui/carousel';
-import { useIsMobile } from '@/hooks/use-mobile';
-import Autoplay from 'embla-carousel-autoplay';
 
 const PLACEHOLDER_LOGOS = [
-  { name: 'University of Melbourne', bg: 'bg-gray-100' },
-  { name: 'Startup Victoria', bg: 'bg-gray-50' },
-  { name: 'Innovation Hub', bg: 'bg-gray-100' },
-  { name: 'TechLaunch Partners', bg: 'bg-gray-50' },
-  { name: 'Founders Institute', bg: 'bg-gray-100' },
-  { name: 'Venture Capital Fund', bg: 'bg-gray-50' },
+  { name: 'University of Melbourne', image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Startup Victoria', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Innovation Hub', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=100&fit=crop&crop=center' },
+  { name: 'TechLaunch Partners', image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Founders Institute', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Venture Capital Fund', image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Tech Accelerator', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Business Incubator', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=100&fit=crop&crop=center' },
 ];
 
 const LogoCarousel: React.FC = () => {
-  const isMobile = useIsMobile();
-  
-  // Show fewer items at once on mobile
-  const itemsToShow = isMobile ? 2 : 4;
-  
-  // Create a ref for the autoplay plugin
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false })
-  );
+  // Duplicate the logos array to create seamless loop
+  const duplicatedLogos = [...PLACEHOLDER_LOGOS, ...PLACEHOLDER_LOGOS];
 
   return (
-    <section className="py-12 bg-gradient-to-r from-gray-50 to-white">
+    <section className="py-12 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
       <div className="container">
         <motion.h3 
           className="text-center text-xl md:text-2xl mb-8"
@@ -44,39 +30,35 @@ const LogoCarousel: React.FC = () => {
           In association with
         </motion.h3>
         
-        <div className="relative mx-auto max-w-5xl px-10">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
+        <div className="relative">
+          <motion.div
+            className="flex gap-8 items-center"
+            animate={{
+              x: [0, -100 * PLACEHOLDER_LOGOS.length],
             }}
-            plugins={[plugin.current]}
-            className="w-full"
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              },
+            }}
+            style={{ width: `${200 * duplicatedLogos.length}px` }}
           >
-            <CarouselContent>
-              {PLACEHOLDER_LOGOS.map((logo, index) => (
-                <CarouselItem key={index} className={`basis-1/${itemsToShow}`}>
-                  <motion.div 
-                    className={`${logo.bg} h-24 rounded-lg border border-border flex items-center justify-center p-4 mx-2 backdrop-blur-sm`}
-                    whileHover={{ 
-                      scale: 1.05, 
-                      boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" 
-                    }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="text-center font-medium text-muted-foreground">
-                      {logo.name}
-                    </div>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-4" />
-            <CarouselNext className="right-0 md:-right-4" />
-          </Carousel>
+            {duplicatedLogos.map((logo, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-48 h-24 bg-white rounded-lg border border-border flex items-center justify-center p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <img
+                  src={logo.image}
+                  alt={logo.name}
+                  className="w-full h-full object-cover rounded-md opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

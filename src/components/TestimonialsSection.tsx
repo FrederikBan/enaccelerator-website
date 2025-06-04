@@ -128,18 +128,8 @@ const TestimonialsSection = () => {
               ))}
             </div>
             
-            {/* Auto-play indicator */}
-            <div className="flex justify-center mt-4">
-              <div className="flex items-center gap-2 text-xs text-foreground/50">
-                <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  isAutoPlay ? 'bg-brand-yellow animate-pulse' : 'bg-gray-300'
-                }`}></div>
-                <span>{isAutoPlay ? 'Auto-rotating' : 'Paused'}</span>
-              </div>
-            </div>
-            
-            {/* Arrow navigation */}
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12">
+            {/* Arrow navigation - moved further away from the card */}
+            <div className="absolute top-1/2 -translate-y-1/2 -left-8 md:-left-20">
               <button 
                 onClick={() => handleArrowClick('prev')}
                 className="h-12 w-12 rounded-full flex items-center justify-center bg-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group"
@@ -151,7 +141,7 @@ const TestimonialsSection = () => {
               </button>
             </div>
             
-            <div className="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-12">
+            <div className="absolute top-1/2 -translate-y-1/2 -right-8 md:-right-20">
               <button 
                 onClick={() => handleArrowClick('next')}
                 className="h-12 w-12 rounded-full flex items-center justify-center bg-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group"
