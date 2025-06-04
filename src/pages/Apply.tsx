@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import InstaxPhotos from '@/components/InstaxPhotos';
-import InteractiveObjects from '@/components/InteractiveObjects';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Apply = () => {
@@ -46,16 +45,13 @@ const Apply = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container pt-20 md:pt-28 pb-8 md:pb-16 relative">
-        {/* Interactive Objects */}
-        <InteractiveObjects />
-
+      <main className="container pt-20 md:pt-24 pb-8 md:pb-12">
         {/* Page Header */}
-        <div className="max-w-3xl mx-auto mb-6">
-          <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-4">
+        <div className="max-w-3xl mx-auto mb-4">
+          <span className="inline-block py-1.5 px-4 bg-brand-yellow/20 text-sm font-medium rounded-full mb-3">
             Applications Open
           </span>
-          <h1 className="mb-4">Apply to the EnAccelerator Program</h1>
+          <h1 className="mb-3">Apply to the EnAccelerator Program</h1>
           <p className="text-lg text-foreground/70">
             Join Melbourne's premier student startup incubator and transform your innovative ideas into impactful businesses.
           </p>
@@ -65,39 +61,39 @@ const Apply = () => {
         <InstaxPhotos photos={applicationPhotos} />
         
         {/* Timeline Section */}
-        <section className="mb-8">
-          <h2 className="mb-6">Application Timeline</h2>
+        <section className="mb-6">
+          <h2 className="mb-4">Application Timeline</h2>
           
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="bg-muted/30 p-6 rounded-lg border border-border relative">
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="bg-muted/30 p-5 rounded-lg border border-border relative">
               <div className="absolute -top-3 left-6 bg-brand-yellow text-black px-3 py-1 text-sm font-medium rounded-full">
                 Current Phase
               </div>
               <h3 className="text-xl font-medium mb-2">Applications Open</h3>
-              <p className="text-foreground/70 mb-4">May 15 - June 10, 2025</p>
+              <p className="text-foreground/70 mb-3">May 15 - June 10, 2025</p>
               <p className="text-sm">Submit your application through our online form. Be sure to include your business idea and relevant experience.</p>
             </div>
             
-            <div className="bg-muted/30 p-6 rounded-lg border border-border">
+            <div className="bg-muted/30 p-5 rounded-lg border border-border">
               <h3 className="text-xl font-medium mb-2">Interview Stage</h3>
-              <p className="text-foreground/70 mb-4">June 15 - June 25, 2025</p>
+              <p className="text-foreground/70 mb-3">June 15 - June 25, 2025</p>
               <p className="text-sm">Selected applicants will be invited for an interview with our team to discuss their ideas in detail.</p>
             </div>
             
-            <div className="bg-muted/30 p-6 rounded-lg border border-border">
+            <div className="bg-muted/30 p-5 rounded-lg border border-border">
               <h3 className="text-xl font-medium mb-2">Program Start</h3>
-              <p className="text-foreground/70 mb-4">July 5, 2025</p>
+              <p className="text-foreground/70 mb-3">July 5, 2025</p>
               <p className="text-sm">Successful applicants begin the 12-week EnAccelerator program.</p>
             </div>
           </div>
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-8">
-          <h2 className="mb-6">Eligibility</h2>
+        <section className="mb-6">
+          <h2 className="mb-4">Eligibility</h2>
           
-          <div className="bg-muted/30 p-8 rounded-lg border border-border">
-            <ul className="space-y-4">
+          <div className="bg-muted/30 p-6 rounded-lg border border-border">
+            <ul className="space-y-3">
               <li className="flex items-start">
                 <div className="bg-brand-yellow/20 p-2 rounded-full mr-4 mt-1">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-brand-yellow" viewBox="0 0 20 20" fill="currentColor">
@@ -150,12 +146,12 @@ const Apply = () => {
         </section>
         
         {/* Application Requirements */}
-        <section className="mb-8">
-          <h2 className="mb-6">Application Requirements</h2>
+        <section className="mb-6">
+          <h2 className="mb-4">Application Requirements</h2>
           
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="bg-muted/30 p-6 rounded-lg border border-border">
-              <h3 className="text-xl font-medium mb-4">Required Materials</h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-muted/30 p-5 rounded-lg border border-border">
+              <h3 className="text-xl font-medium mb-3">Required Materials</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 bg-brand-yellow rounded-full"></span>
@@ -176,8 +172,8 @@ const Apply = () => {
               </ul>
             </div>
             
-            <div className="bg-muted/30 p-6 rounded-lg border border-border">
-              <h3 className="text-xl font-medium mb-4">Selection Criteria</h3>
+            <div className="bg-muted/30 p-5 rounded-lg border border-border">
+              <h3 className="text-xl font-medium mb-3">Selection Criteria</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 bg-brand-yellow rounded-full"></span>
@@ -202,16 +198,16 @@ const Apply = () => {
         
         {/* Apply Now CTA */}
         <section>
-          <div className="bg-brand-yellow/10 rounded-lg p-8 md:p-12 text-center">
-            <h2 className="mb-4">Ready to Take the Leap?</h2>
-            <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
+          <div className="bg-brand-yellow/10 rounded-lg p-6 md:p-8 text-center">
+            <h2 className="mb-3">Ready to Take the Leap?</h2>
+            <p className="text-foreground/70 mb-6 max-w-2xl mx-auto">
               Transform your idea into a startup with guidance from industry experts, mentorship, 
               funding opportunities, and a community of like-minded innovators.
             </p>
             <Button size="lg" className="bg-brand-yellow text-black hover:bg-brand-yellow/90 min-w-[200px]">
               Start Application
             </Button>
-            <p className="mt-4 text-sm text-foreground/60">
+            <p className="mt-3 text-sm text-foreground/60">
               Application deadline: June 10, 2025, 11:59 PM AEST
             </p>
           </div>
