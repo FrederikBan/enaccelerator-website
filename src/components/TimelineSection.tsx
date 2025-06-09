@@ -67,8 +67,8 @@ const TimelineSection = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Timeline Navigation - Left Side */}
-          <div className="lg:col-span-4 order-2 lg:order-1 lg:sticky lg:top-24">
+          {/* Timeline Navigation - Left Side - Hidden on mobile */}
+          <div className="hidden lg:block lg:col-span-4 order-2 lg:order-1 lg:sticky lg:top-24">
             <div className="space-y-1">
               {timelineItems.map((item, index) => (
                 <button
@@ -106,7 +106,7 @@ const TimelineSection = () => {
                     <p className="text-sm text-foreground/70 mb-1">WEEK {timelineItems[activeItem].week}</p>
                     <h3 className="text-2xl md:text-3xl font-bold">{timelineItems[activeItem].title}</h3>
                   </div>
-                  <div className="hidden md:flex gap-2">
+                  <div className="flex gap-2">
                     <button 
                       className="h-10 w-10 rounded-full flex items-center justify-center border border-border hover:border-brand-yellow disabled:opacity-50"
                       onClick={() => setActiveItem(prev => Math.max(prev - 1, 0))}
