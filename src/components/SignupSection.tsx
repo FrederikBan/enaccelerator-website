@@ -22,7 +22,6 @@ const SignupSection = () => {
                     action="https://assets.mailerlite.com/jsonp/1310147/forms/156545062429263666/subscribe" 
                     data-code="" 
                     method="post" 
-                    target="_blank"
                   >
                     <div className="ml-form-formContent horozintalForm">
                       <div className="ml-form-horizontalRow">
