@@ -16,11 +16,11 @@ const StaticInstax: React.FC<StaticInstaxProps> = ({
   rotation = 0,
   size = 'md'
 }) => {
-  // Size mapping
+  // Size mapping - made larger
   const sizeClasses = {
-    sm: 'max-w-[180px]',
-    md: 'max-w-[280px]',
-    lg: 'max-w-[320px]'
+    sm: 'max-w-[220px]',
+    md: 'max-w-[320px]',
+    lg: 'max-w-[380px]'
   };
   
   return (

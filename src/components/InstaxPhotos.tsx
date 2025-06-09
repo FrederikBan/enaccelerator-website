@@ -32,7 +32,7 @@ const InstaxPhotos: React.FC<InstaxPhotosProps> = ({ photos }) => {
             imageSrc={photo.src}
             caption={photo.caption}
             rotation={photo.rotation || (index === 0 ? -2 : index === 1 ? 1 : 3)}
-            size={isMobile ? "sm" : "lg"}
+            size={isMobile ? "md" : "lg"}
           />
         </div>
       ))}

@@ -38,7 +38,7 @@ const ApplicationsClosed = () => {
       
       <main className="container pt-20 md:pt-28 pb-16">
         {/* Hero Section */}
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <div className="max-w-4xl mx-auto text-center mb-8">
           <span className="inline-block py-2 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-6">
             Applications Closed
           </span>
@@ -54,7 +54,7 @@ const ApplicationsClosed = () => {
         <InstaxPhotos photos={photos} />
         
         {/* Next Cohort Information */}
-        <section className="mb-16">
+        <section className="mb-12">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20">
               <h2 className="text-3xl font-bold mb-8">Next Application Cycle</h2>
@@ -74,9 +74,9 @@ const ApplicationsClosed = () => {
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-16">
+        <section className="mb-12">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Prepare for Next Time</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Prepare for Next Time</h2>
             
             <div className="bg-white rounded-xl p-8 shadow-lg border border-border">
               <div className="grid gap-6 md:grid-cols-2">
