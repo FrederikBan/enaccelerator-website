@@ -106,7 +106,7 @@ const TimelineSection = () => {
                     <p className="text-sm text-foreground/70 mb-1">WEEK {timelineItems[activeItem].week}</p>
                     <h3 className="text-2xl md:text-3xl font-bold">{timelineItems[activeItem].title}</h3>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="hidden md:flex gap-2">
                     <button 
                       className="h-10 w-10 rounded-full flex items-center justify-center border border-border hover:border-brand-yellow disabled:opacity-50"
                       onClick={() => setActiveItem(prev => Math.max(prev - 1, 0))}
