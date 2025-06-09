@@ -105,7 +105,8 @@ const SignupSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         .ml-form-embedSubmitLoad {
           display: inline-block;
           width: 20px;
@@ -182,7 +183,8 @@ const SignupSection = () => {
             display: block;
           }
         }
-      `}</style>
+        `}
+      </style>
 
       <script
         dangerouslySetInnerHTML={{
