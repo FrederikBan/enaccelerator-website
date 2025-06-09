@@ -8,11 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MailerLite Universal -->
+    <script async src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"></script>
+    
     <title>EnAccelerator | Student Startup Incubator</title>
     <meta name="description" content="EnAccelerator helps student founders transform their ideas into successful startups through mentorship, funding, and resources.">
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- MailerLite Form Tracking -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch("https://assets.mailerlite.com/jsonp/1310147/forms/156545062429263666/takel")
+          .catch(function(error) {
+            console.log('MailerLite tracking initialization failed:', error);
+          });
+      });
+    </script>
   </body>
 </html>

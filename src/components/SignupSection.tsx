@@ -1,164 +1,201 @@
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useToast } from '@/components/ui/use-toast';
-import { EmailProviderType, EmailService, createEmailService } from '@/services/emailService';
-
-interface MailingListConfig {
-  provider: EmailProviderType;
-  apiKey: string;
-  listId?: string;
-  apiEndpoint?: string;
-}
+import React from 'react';
 
 const SignupSection = () => {
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showNameField, setShowNameField] = useState(false);
-  const { toast } = useToast();
-
-  // This config should be set once during app initialization
-  // For demo purposes it's defined here, but in production
-  // you would load this from environment variables or settings
-  const mailingListConfig: MailingListConfig = {
-    provider: 'custom', // Change to your provider: 'mailchimp', 'sendgrid', 'convertkit', 'custom'
-    apiKey: 'your-api-key', // Store this securely in backend/environment
-    apiEndpoint: 'https://your-api-endpoint.com/subscribe', // Your API endpoint
-  };
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!showNameField) {
-      setShowNameField(true);
-      return;
-    }
-    
-    if (!email) {
-      toast({
-        title: "Email Required",
-        description: "Please enter your email address to subscribe.",
-        variant: "destructive",
-      });
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    try {
-      // In a real app, you'd want to handle API keys securely in a backend
-      // This is a frontend demonstration that would need a backend service
-      // to securely handle API keys
-      
-      // For now, we'll simulate the behavior for demo purposes
-      console.log("Subscribing email:", email, "with name:", firstName);
-      
-      // This would typically be a backend API call
-      setTimeout(() => {
-        toast({
-          title: "Thank you for subscribing!",
-          description: "We'll keep you updated on EnAccelerator news and upcoming cohorts.",
-        });
-        setEmail('');
-        setFirstName('');
-        setShowNameField(false);
-        setIsSubmitting(false);
-      }, 1000);
-      
-      // Uncomment and modify when you have a real backend or serverless function
-      /*
-      const emailService = createEmailService({
-        providerType: mailingListConfig.provider,
-        apiKey: mailingListConfig.apiKey,
-        listId: mailingListConfig.listId,
-        apiEndpoint: mailingListConfig.apiEndpoint,
-      });
-      
-      const result = await emailService.subscribeEmail({
-        email,
-        firstName: firstName || undefined,
-      });
-      
-      if (result.success) {
-        toast({
-          title: "Success!",
-          description: result.message || "You've been subscribed to our mailing list.",
-        });
-        setEmail('');
-        setFirstName('');
-        setShowNameField(false);
-      } else {
-        toast({
-          title: "Subscription Failed",
-          description: result.message || "There was an issue subscribing you. Please try again.",
-          variant: "destructive",
-        });
-      }
-      */
-      
-    } catch (error) {
-      console.error("Subscription error:", error);
-      toast({
-        title: "Subscription Failed",
-        description: "There was an error subscribing to the mailing list. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-  
   return (
     <section className="bg-brand-yellow py-20">
       <div className="container text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-black mb-6">Stay Updated</h2>
-          <p className="text-lg text-black/80 mb-10">
-            Subscribe to our newsletter for application dates, events, and startup resources.
-          </p>
-          
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-            {showNameField && (
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex-1">
-                  <Input
-                    type="text"
-                    placeholder="Your first name (optional)"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    className="bg-white border-transparent focus:border-black/20 h-12"
-                  />
+          <div id="mlb2-26946439" className="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-26946439">
+            <div className="ml-form-align-center">
+              <div className="ml-form-embedWrapper embedForm">
+                <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                  <div className="ml-form-embedContent">
+                    <h4 className="text-black mb-6">Stay Updated</h4>
+                    <p className="text-lg text-black/80 mb-10">
+                      Subscribe to our newsletter for application dates, events, and startup resources.
+                    </p>
+                  </div>
+
+                  <form 
+                    className="ml-block-form" 
+                    action="https://assets.mailerlite.com/jsonp/1310147/forms/156545062429263666/subscribe" 
+                    data-code="" 
+                    method="post" 
+                    target="_blank"
+                  >
+                    <div className="ml-form-formContent horozintalForm">
+                      <div className="ml-form-horizontalRow">
+                        <div className="ml-input-horizontal">
+                          <div style={{ width: '100%' }} className="horizontal-fields">
+                            <div className="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                              <input 
+                                type="email" 
+                                className="form-control bg-white border-transparent focus:border-black/20 h-12 px-4 py-3 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 rounded-lg w-full" 
+                                data-inputmask="" 
+                                name="fields[email]" 
+                                placeholder="Your email address" 
+                                autoComplete="email"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="ml-button-horizontal primary">
+                          <button 
+                            type="submit" 
+                            className="bg-black text-white hover:bg-black/80 h-12 px-8 rounded-lg font-medium transition-colors whitespace-nowrap"
+                          >
+                            Subscribe
+                          </button>
+                          <button 
+                            disabled 
+                            style={{ display: 'none' }} 
+                            type="button" 
+                            className="loading bg-black text-white h-12 px-8 rounded-lg font-medium"
+                          >
+                            <div className="ml-form-embedSubmitLoad"></div>
+                            <span className="sr-only">Loading...</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="ml-form-embedPermissions">
+                      <div className="ml-form-embedPermissionsContent horizontal privacy-policy">
+                        <p className="text-sm text-black/60 mt-3">
+                          We respect your privacy. Unsubscribe at any time.
+                        </p>
+                      </div>
+                    </div>
+
+                    <input type="hidden" name="ml-submit" value="1" />
+                    <input type="hidden" name="anticsrf" value="true" />
+
+                    <div className="ml-mobileButton-horizontal">
+                      <button 
+                        type="submit" 
+                        className="bg-black text-white hover:bg-black/80 h-12 px-8 rounded-lg font-medium transition-colors w-full"
+                      >
+                        Subscribe
+                      </button>
+                      <button 
+                        disabled 
+                        style={{ display: 'none' }} 
+                        type="button" 
+                        className="loading bg-black text-white h-12 px-8 rounded-lg font-medium w-full"
+                      >
+                        <div className="ml-form-embedSubmitLoad"></div>
+                        <span className="sr-only">Loading...</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <div className="ml-form-successBody row-success" style={{ display: 'none' }}>
+                  <div className="ml-form-successContent">
+                    <h4 className="text-black mb-4">Thank you!</h4>
+                    <p className="text-black/80">You have successfully joined our mailing list.</p>
+                  </div>
                 </div>
               </div>
-            )}
-            
-            <div className="flex flex-col sm:flex-row gap-3">
-              <div className="flex-1">
-                <Input
-                  type="email"
-                  placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-white border-transparent focus:border-black/20 h-12"
-                />
-              </div>
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="bg-black text-white hover:bg-black/80 h-12 px-8"
-              >
-                {isSubmitting ? "Subscribing..." : showNameField ? "Subscribe" : "Continue"}
-              </Button>
             </div>
-          </form>
-          <p className="text-sm text-black/60 mt-3">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
+          </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .ml-form-embedSubmitLoad {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+        
+        .ml-form-embedSubmitLoad:after {
+          content: " ";
+          display: block;
+          width: 11px;
+          height: 11px;
+          margin: 1px;
+          border-radius: 50%;
+          border: 4px solid #fff;
+          border-color: #ffffff #ffffff #ffffff transparent;
+          animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+        }
+        
+        @keyframes ml-form-embedSubmitLoad {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0,0,0,0);
+          border: 0;
+        }
+        
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+        
+        .ml-input-horizontal {
+          flex: 1;
+        }
+        
+        .ml-button-horizontal {
+          width: 100%;
+        }
+        
+        .ml-mobileButton-horizontal {
+          display: none;
+          margin-top: 16px;
+        }
+        
+        @media (min-width: 640px) {
+          .ml-form-formContent.horozintalForm .ml-form-horizontalRow {
+            flex-direction: row;
+            align-items: end;
+          }
+          
+          .ml-button-horizontal {
+            width: auto;
+            margin-left: 12px;
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .ml-button-horizontal {
+            display: none;
+          }
+          
+          .ml-mobileButton-horizontal {
+            display: block;
+          }
+        }
+      `}</style>
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            function ml_webform_success_26946439() {
+              var successElement = document.querySelector('.ml-subscribe-form-26946439 .row-success');
+              var formElement = document.querySelector('.ml-subscribe-form-26946439 .row-form');
+              if (successElement) successElement.style.display = 'block';
+              if (formElement) formElement.style.display = 'none';
+            }
+          `
+        }}
+      />
     </section>
   );
 };
