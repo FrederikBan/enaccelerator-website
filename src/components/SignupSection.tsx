@@ -11,9 +11,9 @@ const SignupSection = () => {
               <div className="ml-form-embedWrapper embedForm">
                 <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
                   <div className="ml-form-embedContent">
-                    <h4 className="text-black mb-6">Stay Updated</h4>
+                    <h4 className="text-black mb-6 text-3xl md:text-4xl font-bold">Stay Updated</h4>
                     <p className="text-lg text-black/80 mb-10">
-                      Subscribe to our newsletter for application dates, events, and startup resources.
+                      Subscribe to our mailing list for application dates, events, and startup resources.
                     </p>
                   </div>
 

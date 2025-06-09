@@ -141,16 +141,25 @@ const ApplicationsClosed = () => {
                 Subscribe to our newsletter to be notified when applications open for the next cohort. 
                 We also share startup resources, event invitations, and success stories from our current participants.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <form 
+                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+                action="https://assets.mailerlite.com/jsonp/1310147/forms/156545062429263666/subscribe"
+                method="post"
+                target="_blank"
+              >
                 <input 
                   type="email" 
+                  name="fields[email]"
                   placeholder="Your email address" 
                   className="flex h-12 w-full rounded-lg border border-input bg-background px-4 py-3 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  required
                 />
-                <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90 whitespace-nowrap h-12 px-6">
+                <input type="hidden" name="ml-submit" value="1" />
+                <input type="hidden" name="anticsrf" value="true" />
+                <Button type="submit" className="bg-brand-yellow text-black hover:bg-brand-yellow/90 whitespace-nowrap h-12 px-6">
                   Subscribe
                 </Button>
-              </div>
+              </form>
             </div>
           </div>
         </section>
