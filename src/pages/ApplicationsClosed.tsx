@@ -1,39 +1,31 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import InstaxPhotos from '@/components/InstaxPhotos';
 import { useIsMobile } from '@/hooks/use-mobile';
-
 const ApplicationsClosed = () => {
   const isMobile = useIsMobile();
-  
   useEffect(() => {
     document.title = "Applications Closed | EnAccelerator";
     if (window.scrollTo) {
       window.scrollTo(0, 0);
     }
   }, []);
-  
+
   // Define photos for this page
-  const photos = [
-    {
-      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      alt: "Previous Cohort",
-      caption: "Previous Cohort",
-      rotation: -6
-    },
-    {
-      src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      alt: "Cohort 2025",
-      caption: "Cohort 2025",
-      rotation: 8
-    }
-  ];
-  
-  return (
-    <div className="min-h-screen">
+  const photos = [{
+    src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    alt: "Previous Cohort",
+    caption: "Previous Cohort",
+    rotation: -6
+  }, {
+    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    alt: "Cohort 2025",
+    caption: "Cohort 2025",
+    rotation: 8
+  }];
+  return <div className="min-h-screen">
       <Navbar />
       
       <main className="container pt-20 md:pt-28 pb-16">
@@ -59,8 +51,8 @@ const ApplicationsClosed = () => {
             <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20">
               <h2 className="text-3xl font-bold mb-8">Next Application Cycle</h2>
               <div className="inline-block bg-white rounded-xl px-8 py-6 mb-8 shadow-lg">
-                <p className="text-3xl font-bold text-brand-yellow mb-2">Opening November 2025</p>
-                <p className="text-foreground/70 text-lg">For the Winter 2026 Cohort</p>
+                <p className="text-3xl font-bold text-brand-yellow mb-2">Opening August 2025</p>
+                <p className="text-foreground/70 text-lg">For the 2025 Semester 2 Cohort</p>
               </div>
               <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
                 While applications are currently closed, we encourage you to prepare for the next cycle. 
@@ -112,7 +104,7 @@ const ApplicationsClosed = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Full Commitment</h4>
-                    <p className="text-foreground/70">You must be able to commit at least 10 hours per week to work on your startup throughout the program.</p>
+                    <p className="text-foreground/70">You must be able to commit at least 5 hours per week to work on your start-up throughout the program, including workshops.</p>
                   </div>
                 </div>
                 
@@ -141,19 +133,8 @@ const ApplicationsClosed = () => {
                 Subscribe to our newsletter to be notified when applications open for the next cohort. 
                 We also share startup resources, event invitations, and success stories from our current participants.
               </p>
-              <form 
-                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
-                action="https://assets.mailerlite.com/jsonp/1310147/forms/156545062429263666/subscribe"
-                method="post"
-                target="_blank"
-              >
-                <input 
-                  type="email" 
-                  name="fields[email]"
-                  placeholder="Your email address" 
-                  className="flex h-12 w-full rounded-lg border border-input bg-background px-4 py-3 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  required
-                />
+              <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" action="https://assets.mailerlite.com/jsonp/1310147/forms/156545062429263666/subscribe" method="post" target="_blank">
+                <input type="email" name="fields[email]" placeholder="Your email address" className="flex h-12 w-full rounded-lg border border-input bg-background px-4 py-3 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required />
                 <input type="hidden" name="ml-submit" value="1" />
                 <input type="hidden" name="anticsrf" value="true" />
                 <Button type="submit" className="bg-brand-yellow text-black hover:bg-brand-yellow/90 whitespace-nowrap h-12 px-6">
@@ -166,8 +147,6 @@ const ApplicationsClosed = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ApplicationsClosed;
