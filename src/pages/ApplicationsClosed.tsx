@@ -28,7 +28,7 @@ const ApplicationsClosed = () => {
   return <div className="min-h-screen">
       <Navbar />
       
-      <main className="container pt-20 md:pt-28 pb-16 py-[5px]">
+      <main className="container pt-20 md:pt-28 pb-16">
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-8">
           <span className="inline-block py-2 px-4 bg-destructive/20 text-sm font-medium rounded-full mb-6">
