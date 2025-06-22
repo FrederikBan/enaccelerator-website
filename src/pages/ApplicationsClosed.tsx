@@ -46,9 +46,9 @@ const ApplicationsClosed = () => {
         <InstaxPhotos photos={photos} />
         
         {/* Next Cohort Information */}
-        <section className="mb-12">
+        <section className="\n">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20">
+            <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20 py-[48px]">
               <h2 className="text-3xl font-bold mb-8">Next Application Cycle</h2>
               <div className="inline-block bg-white rounded-xl px-8 py-6 mb-8 shadow-lg">
                 <p className="text-3xl font-bold text-brand-yellow mb-2">Opening August 2025</p>
@@ -66,7 +66,7 @@ const ApplicationsClosed = () => {
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-12">
+        <section className="\n">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Prepare for Next Time</h2>
             
