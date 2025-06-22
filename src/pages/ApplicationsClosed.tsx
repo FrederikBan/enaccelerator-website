@@ -66,7 +66,7 @@ const ApplicationsClosed = () => {
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-12">
+        <section className="">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Prepare for Next Time</h2>
             
