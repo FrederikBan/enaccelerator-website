@@ -46,7 +46,7 @@ const ApplicationsClosed = () => {
         <InstaxPhotos photos={photos} />
         
         {/* Next Cohort Information */}
-        <section className="mb-12">
+        <section className="">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20">
               <h2 className="text-3xl font-bold mb-8">Next Application Cycle</h2>
