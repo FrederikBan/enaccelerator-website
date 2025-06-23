@@ -10,16 +10,16 @@ const testimonials = [
     batch: "2024 Semester 2 Cohort"
   },
   {
-    quote: "From ideation to our first funding round, the EnAccelerator team was there every step of the way. The network we built through the program continues to open doors for us.",
-    name: "Michael Wong",
-    role: "Co-founder, HealthSync",
-    batch: "2022 Cohort"
+    quote: "EnAccelerator was transformative! It's the perfect introduction to the entrepreneurial space, connected me with inspiring individuals, and empowered me to build something meaningful.",
+    name: "Erik Schober",
+    role: "Founder of RegulaMind",
+    batch: "2025 Semester 1 Cohort"
   },
   {
-    quote: "The structured program and expert mentorship helped us avoid common startup pitfalls and accelerate our growth. We wouldn't be where we are today without EnAccelerator.",
-    name: "Priya Sharma",
-    role: "CEO, LearnLoop",
-    batch: "2023 Cohort"
+    quote: "EA has been a highly rewarding experience in terms of the structural development of the foundations for building a startup. I came in with no experience and by the end of the 10-week programme, came out with a startup I intend to hold onto for a long time.",
+    name: "Trishton Lee",
+    role: "Founder of PocketDry",
+    batch: "2025 Semester 1 Cohort"
   }
 ];
 
