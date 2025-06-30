@@ -147,8 +147,8 @@ const BenefitsSection = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                      alt="Founders collaborating"
+                      src="images/stock_images/workshop-1.png"
+                      alt="Person presenting workshop"
                       className="object-cover w-full h-full rounded-md"
                     />
                   </motion.div>
@@ -158,8 +158,8 @@ const BenefitsSection = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-                      alt="Tech innovation"
+                      src="images/stock_images/workshop-2.png"
+                      alt="Group of people posing for photo"
                       className="object-cover w-full h-full rounded-md"
                     />
                     <p className="text-white/80 text-sm absolute bottom-3 left-3 bg-black/60 p-2 rounded">Join a community of founders driven by innovation</p>
@@ -177,8 +177,8 @@ const BenefitsSection = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
-                      alt="Hands-on learning"
+                      src="images/stock_images/demoday-2.png"
+                      alt="Three people posing for photo"
                       className="object-cover w-full h-full rounded-md"
                     />
                     <p className="text-white/80 text-sm absolute bottom-3 left-3 bg-black/60 p-2 rounded">Learn by doing</p>
@@ -189,8 +189,8 @@ const BenefitsSection = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-                      alt="Collaborative environment"
+                      src="images/stock_images/demoday-2.png"
+                      alt="People chatting"
                       className="object-cover w-full h-full rounded-md"
                     />
                   </motion.div>
