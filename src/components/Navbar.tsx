@@ -34,16 +34,16 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#program" className="text-foreground/80 hover:text-foreground transition-colors">
+          <a href="index.html#program" className="text-foreground/80 hover:text-foreground transition-colors">
             Program
           </a>
-          <a href="#benefits" className="text-foreground/80 hover:text-foreground transition-colors">
+          <a href="index.html#benefits" className="text-foreground/80 hover:text-foreground transition-colors">
             Benefits
           </a>
-          <a href="#timeline" className="text-foreground/80 hover:text-foreground transition-colors">
+          <a href="index.html#timeline" className="text-foreground/80 hover:text-foreground transition-colors">
             Timeline
           </a>
-          <a href="#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">
+          <a href="index.html#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">
             Testimonials
           </a>
           <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90" asChild>
