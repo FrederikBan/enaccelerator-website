@@ -93,7 +93,7 @@ const ApplicationsClosed = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">Innovative Idea</h4>
+                    <h4 className="text-lg font-semibold mb-2">Join As A Solo Founder</h4>
                     <p className="text-foreground/70">You should have a business idea that has the potential for sustainable growth and social impact.</p>
                   </div>
                 </div>
