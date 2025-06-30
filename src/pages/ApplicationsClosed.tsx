@@ -117,7 +117,7 @@ const ApplicationsClosed = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">Join the Enactus Melbourne Com</h4>
+                    <h4 className="text-lg font-semibold mb-2">Join the Enactus Melbourne Committee</h4>
                     <p className="text-foreground/70">While not required, having a team of 2-4 founders is highly recommended for success.</p>
                   </div>
                 </div>
