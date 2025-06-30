@@ -23,7 +23,7 @@ const LogoCarousel: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          In association with
+          Supported by
         </motion.h3>
         
         <div className="relative">
