@@ -58,9 +58,15 @@ const ApplicationsClosed = () => {
                 While applications are currently closed, we encourage you to prepare for the next cycle. 
                 Review our eligibility criteria and application requirements below to ensure you're ready when applications reopen.
               </p>
-              <Button variant="outline" size="lg" className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto">
-                Join Waitlist
-              </Button>
+                <a href="https://enactus-melbourne.notion.site/222333bb4fd7801b842cc998da5c3fe2?pvs=105" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto"
+                  >
+                    Join Waitlist
+                  </Button>
+                </a>
             </div>
           </div>
         </section>
