@@ -16,7 +16,7 @@ const testimonials = [
     batch: "2025 Semester 1 Cohort"
   },
   {
-    quote: "EA has been a highly rewarding experience in terms of the structural development of the foundations for building a startup. I came in with no experience and by the end of the 10-week programme, came out with a startup I intend to hold onto for a long time.",
+    quote: "[EnAccelerator] has been a highly rewarding experience in terms of the structural development of the foundations for building a startup. I came in with no experience and by the end of the 10-week programme, came out with a startup I intend to hold onto for a long time.",
     name: "Trishton Lee",
     role: "Founder of PocketDry",
     batch: "2025 Semester 1 Cohort"

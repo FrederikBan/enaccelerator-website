@@ -37,22 +37,6 @@ const teamMembers: TeamMember[] = [
     imageUrl: "images/team_images/nathan.jpg",
     email: "hi@nathanlepham.com",
     linkedin: "https://www.linkedin.com/in/nathan-pham-2a2a51264",
-  },
-  {
-    name: "Alexander Choong",
-    role: "Program Associate",
-    bio: "Student at The University of Melbourne",
-    imageUrl: "images/team_images/alex.jpg",
-    email: "alexchoong2005@gmail.com",
-    linkedin: "https://www.linkedin.com/in/alexander-choong-524420237",
-  },
-  {
-    name: "Jessica Chung",
-    role: "Program Associate",
-    bio: "Doctor of Medicine (MD2) Student at the University of Melbourne",
-    imageUrl: "images/team_images/jessica.jpg",
-    /*email: "alex@enaccelerator.com",*/
-    linkedin: "https://www.linkedin.com/in/jessica-chung721",
   }
 ];
 
