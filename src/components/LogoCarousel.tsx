@@ -12,6 +12,10 @@ const PLACEHOLDER_LOGOS = [
 const LogoCarousel: React.FC = () => {
   // Duplicate the logos array to create seamless loop
   const duplicatedLogos = [...PLACEHOLDER_LOGOS, ...PLACEHOLDER_LOGOS];
+  
+  // Calculate animation distance based on actual logo count
+  const logoWidth = 200; // Width of each logo container including gap
+  const animationDistance = PLACEHOLDER_LOGOS.length * logoWidth;
 
   return (
     <section className="py-12 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
@@ -30,7 +34,7 @@ const LogoCarousel: React.FC = () => {
           <motion.div
             className="flex gap-8 items-center"
             animate={{
-              x: [0, -100 * PLACEHOLDER_LOGOS.length],
+              x: [0, -animationDistance],
             }}
             transition={{
               x: {
@@ -40,17 +44,17 @@ const LogoCarousel: React.FC = () => {
                 ease: "linear",
               },
             }}
-            style={{ width: `${200 * duplicatedLogos.length}px` }}
+            style={{ width: `${logoWidth * duplicatedLogos.length}px` }}
           >
             {duplicatedLogos.map((logo, index) => (
               <div
-                key={index}
-                className="flex-shrink-0 w-48 h-24 bg-white rounded-lg border border-border flex items-center justify-center p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                key={`${logo.name}-${index}`}
+                className="flex-shrink-0 w-48 h-24 bg-white rounded-lg border border-border flex items-center justify-center p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <img
                   src={logo.image}
                   alt={logo.name}
-                  className="w-full h-full object-cover rounded-md opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
