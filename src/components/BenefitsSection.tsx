@@ -181,7 +181,6 @@ const BenefitsSection = () => {
                       alt="Three people posing for photo"
                       className="object-cover w-full h-full rounded-md"
                     />
-                    <p className="text-white/80 text-sm absolute bottom-3 left-3 bg-black/60 p-2 rounded">Learn by doing</p>
                   </motion.div>
                   
                   <motion.div 
