@@ -8,8 +8,8 @@ const benefits = [
     description: "Gain guidance from experienced entrepreneurs and industry professionals who've been there before."
   },
   {
-    title: "Authentic & Offline",
-    description: "EnAccelerator has an emphasis on in-person interactions and bonding; no more learning over boring online conference calls."
+    title: "Authentic Connections",
+    description: "EnAccelerator has an emphasis on in-person interactions and bonding; no more learning over online workshops."
   },
   {
     title: "Skill Building",
