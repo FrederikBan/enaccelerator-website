@@ -59,11 +59,7 @@ const ApplicationsClosed = () => {
                 Review our eligibility criteria and application requirements below to ensure you're ready when applications reopen.
               </p>
                 <a href="https://enactus-melbourne.notion.site/222333bb4fd7801b842cc998da5c3fe2?pvs=105" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto"
-                  >
+                  <Button variant="outline" size="lg" className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto">
                     Join Waitlist
                   </Button>
                 </a>
@@ -74,7 +70,7 @@ const ApplicationsClosed = () => {
         {/* Eligibility Section */}
         <section className="">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Prepare for Next Time</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Eligibility Criteria</h2>
             
             <div className="bg-white rounded-xl p-8 shadow-lg border border-border">
               <div className="grid gap-6 md:grid-cols-2">
