@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -7,9 +8,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogClose,
 } from '@/components/ui/dialog';
-import { X } from 'lucide-react';
 import InstaxPhotos from '@/components/InstaxPhotos';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -173,26 +172,16 @@ const ApplicationsClosed = () => {
         <DialogContent className="max-w-4xl w-[90vw] h-[80vh] p-0 gap-0 bg-white/95 backdrop-blur-md border-0 shadow-2xl">
           <DialogHeader className="p-6 pb-4 border-b">
             <DialogTitle className="text-2xl font-bold text-center">Join the Waitlist</DialogTitle>
-            <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
-              <X className="h-6 w-6" />
-              <span className="sr-only">Close</span>
-            </DialogClose>
           </DialogHeader>
-          <div className="flex-1 p-6">
-            <div className="w-full h-full bg-muted/30 rounded-lg border-2 border-dashed border-muted-foreground/20 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-lg font-medium mb-2">Embed your waitlist form here</p>
-                <p className="text-sm text-muted-foreground mb-4">
-                  <iframe src="https://enactus-melbourne.notion.site/ebd/222333bb4fd7801b842cc998da5c3fe2" width="100%" height="600" frameborder="0" allowfullscreen />
-                </p>
-                <div className="bg-white p-4 rounded-lg shadow-sm border max-w-md mx-auto">
-                  <p className="text-xs text-muted-foreground mb-2">Example iframe code:</p>
-                  <code className="text-xs bg-muted p-2 rounded block">
-                    {`<iframe src="your-form-url" width="100%" height="500"></iframe>`}
-                  </code>
-                </div>
-              </div>
-            </div>
+          <div className="flex-1 p-0">
+            <iframe 
+              src="https://enactus-melbourne.notion.site/ebd/222333bb4fd7801b842cc998da5c3fe2" 
+              width="100%" 
+              height="100%" 
+              frameBorder="0" 
+              allowFullScreen
+              className="rounded-b-lg"
+            />
           </div>
         </DialogContent>
       </Dialog>
