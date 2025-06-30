@@ -118,7 +118,7 @@ const ApplicationsClosed = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Join the Enactus Melbourne Committee</h4>
-                    <p className="text-foreground/70">While not required, having a team of 2-4 founders is highly recommended for success.</p>
+                    <p className="text-foreground/70">When you join EnAccelerator, you're also joining the Enactus Melbourne committee. That means full committee meetings, social events and more!</p>
                   </div>
                 </div>
               </div>
