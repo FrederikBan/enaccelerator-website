@@ -15,14 +15,14 @@ const ApplicationsClosed = () => {
 
   // Define photos for this page
   const photos = [{
-    src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-    alt: "Previous Cohort",
-    caption: "Previous Cohort",
+    src: "images/stock_images/workshop-1.png",
+    alt: "Workshop Session",
+    caption: "Workshop Session #1",
     rotation: -6
   }, {
-    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    alt: "Cohort 2025",
-    caption: "Cohort 2025",
+    src: "images/stock_images/enactus-committee.JPG",
+    alt: "Enactus Melbourne Committee",
+    caption: "Join a family of builders",
     rotation: 8
   }];
   return <div className="min-h-screen">

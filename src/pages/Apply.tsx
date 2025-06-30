@@ -27,7 +27,7 @@ const Apply = () => {
     {
       src: "images/stock_images/enactus-committee.JPG",
       alt: "Enactus Melbourne Committee",
-      caption: "Family of builders",
+      caption: "Join a family of builders",
       rotation: 1
     },
     {
