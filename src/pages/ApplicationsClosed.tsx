@@ -1,11 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogClose,
+} from '@/components/ui/dialog';
+import { X } from 'lucide-react';
 import InstaxPhotos from '@/components/InstaxPhotos';
 import { useIsMobile } from '@/hooks/use-mobile';
+
 const ApplicationsClosed = () => {
   const isMobile = useIsMobile();
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  
   useEffect(() => {
     document.title = "Applications Closed | EnAccelerator";
     if (window.scrollTo) {
@@ -25,7 +36,9 @@ const ApplicationsClosed = () => {
     caption: "Cohort 2025",
     rotation: 8
   }];
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       <Navbar />
       
       <main className="container pt-20 md:pt-28 pb-16">
@@ -58,12 +71,19 @@ const ApplicationsClosed = () => {
                 While applications are currently closed, we encourage you to prepare for the next cycle. 
                 Review our eligibility criteria and application requirements below to ensure you're ready when applications reopen.
               </p>
-              <Button variant="outline" size="lg" className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto"
+                onClick={() => setIsWaitlistOpen(true)}
+              >
                 Join Waitlist
               </Button>
             </div>
           </div>
         </section>
+        
+        {/* Eligibility Section and Stay Updated CTA */}
         
         {/* Eligibility Section */}
         <section className="">
@@ -147,6 +167,37 @@ const ApplicationsClosed = () => {
       </main>
       
       <Footer />
-    </div>;
+
+      {/* Waitlist Dialog */}
+      <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
+        <DialogContent className="max-w-4xl w-[90vw] h-[80vh] p-0 gap-0 bg-white/95 backdrop-blur-md border-0 shadow-2xl">
+          <DialogHeader className="p-6 pb-4 border-b">
+            <DialogTitle className="text-2xl font-bold text-center">Join the Waitlist</DialogTitle>
+            <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+              <X className="h-6 w-6" />
+              <span className="sr-only">Close</span>
+            </DialogClose>
+          </DialogHeader>
+          <div className="flex-1 p-6">
+            <div className="w-full h-full bg-muted/30 rounded-lg border-2 border-dashed border-muted-foreground/20 flex items-center justify-center">
+              <div className="text-center">
+                <p className="text-lg font-medium mb-2">Embed your waitlist form here</p>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Replace this placeholder with your iframe embed code
+                </p>
+                <div className="bg-white p-4 rounded-lg shadow-sm border max-w-md mx-auto">
+                  <p className="text-xs text-muted-foreground mb-2">Example iframe code:</p>
+                  <code className="text-xs bg-muted p-2 rounded block">
+                    {`<iframe src="your-form-url" width="100%" height="500"></iframe>`}
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
 };
+
 export default ApplicationsClosed;
