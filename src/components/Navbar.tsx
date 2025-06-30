@@ -82,7 +82,7 @@ const Navbar = () => {
             </button>
           ))}
           <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90" asChild>
-            <Link to="/apply">Apply Now</Link>
+            <Link to="/applications-closed">Apply Now</Link>
           </Button>
         </nav>
 
