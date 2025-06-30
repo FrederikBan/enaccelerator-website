@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,29 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleNavClick = (sectionId: string) => {
+    setIsMobileMenuOpen(false);
+    
+    // If we're not on the homepage, navigate to homepage first
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    
+    // If we're on homepage, scroll to section
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const navItems = [
+    { label: 'Program', sectionId: 'program' },
+    { label: 'Benefits', sectionId: 'benefits' },
+    { label: 'Timeline', sectionId: 'timeline' },
+    { label: 'Testimonials', sectionId: 'testimonials' }
+  ];
 
   return (
     <header 
@@ -34,18 +58,15 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="index.html#program" className="text-foreground/80 hover:text-foreground transition-colors">
-            Program
-          </a>
-          <a href="index.html#benefits" className="text-foreground/80 hover:text-foreground transition-colors">
-            Benefits
-          </a>
-          <a href="index.html#timeline" className="text-foreground/80 hover:text-foreground transition-colors">
-            Timeline
-          </a>
-          <a href="index.html#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">
-            Testimonials
-          </a>
+          {navItems.map((item) => (
+            <button
+              key={item.sectionId}
+              onClick={() => handleNavClick(item.sectionId)}
+              className="text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
+            >
+              {item.label}
+            </button>
+          ))}
           <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90" asChild>
             <Link to="/apply">Apply Now</Link>
           </Button>
@@ -72,40 +93,21 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu - Fixed issue with display on mobile */}
+      {/* Mobile Menu */}
       <div className={cn(
         "md:hidden fixed left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-in-out",
         isMobileMenuOpen ? "top-[calc(var(--header-height,_60px))] max-h-[calc(100vh-var(--header-height,_60px))] overflow-auto" : "-top-[100vh]"
       )}>
         <div className="container flex flex-col space-y-4 py-4">
-          <a 
-            href="#program" 
-            className="py-2 px-4 text-foreground/80 hover:text-foreground"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Program
-          </a>
-          <a 
-            href="#benefits" 
-            className="py-2 px-4 text-foreground/80 hover:text-foreground"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Benefits
-          </a>
-          <a 
-            href="#timeline" 
-            className="py-2 px-4 text-foreground/80 hover:text-foreground"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Timeline
-          </a>
-          <a 
-            href="#testimonials" 
-            className="py-2 px-4 text-foreground/80 hover:text-foreground"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Testimonials
-          </a>
+          {navItems.map((item) => (
+            <button
+              key={item.sectionId}
+              onClick={() => handleNavClick(item.sectionId)}
+              className="py-2 px-4 text-foreground/80 hover:text-foreground text-left"
+            >
+              {item.label}
+            </button>
+          ))}
           <div className="px-4 pt-2">
             <Button 
               className="bg-brand-yellow text-black hover:bg-brand-yellow/90 w-full"
