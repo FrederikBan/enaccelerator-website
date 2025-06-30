@@ -183,7 +183,7 @@ const ApplicationsClosed = () => {
               <div className="text-center">
                 <p className="text-lg font-medium mb-2">Embed your waitlist form here</p>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Replace this placeholder with your iframe embed code
+                  <iframe src="https://enactus-melbourne.notion.site/ebd/222333bb4fd7801b842cc998da5c3fe2" width="100%" height="600" frameborder="0" allowfullscreen />
                 </p>
                 <div className="bg-white p-4 rounded-lg shadow-sm border max-w-md mx-auto">
                   <p className="text-xs text-muted-foreground mb-2">Example iframe code:</p>
