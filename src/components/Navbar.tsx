@@ -2,12 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -20,12 +21,25 @@ const Navbar = () => {
     };
   }, []);
 
+  // Handle scrolling to section after navigation
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const sectionId = location.hash.substring(1);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   const handleNavClick = (sectionId: string) => {
     setIsMobileMenuOpen(false);
     
-    // If we're not on the homepage, navigate to homepage first
+    // If we're not on the homepage, navigate to homepage with hash
     if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
+      navigate(`/#${sectionId}`);
       return;
     }
     
