@@ -94,7 +94,7 @@ const ApplicationsClosed = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Join As A Solo Founder</h4>
-                    <p className="text-foreground/70">You should have a business idea that has the potential for sustainable growth and social impact.</p>
+                    <p className="text-foreground/70">Joining EnAccelerator is done on an individual founder basis, but finding cofounders and forming teams is heavily encouraged within the program.</p>
                   </div>
                 </div>
                 
