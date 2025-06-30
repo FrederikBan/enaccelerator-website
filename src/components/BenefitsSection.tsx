@@ -177,7 +177,7 @@ const BenefitsSection = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="images/stock_images/demoday-2.png"
+                      src="images/stock_images/demoday-2.jpg"
                       alt="Three people posing for photo"
                       className="object-cover w-full h-full rounded-md"
                     />
@@ -189,7 +189,7 @@ const BenefitsSection = () => {
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
-                      src="images/stock_images/demoday-2.png"
+                      src="images/stock_images/demoday-1.jpg"
                       alt="People chatting"
                       className="object-cover w-full h-full rounded-md"
                     />
