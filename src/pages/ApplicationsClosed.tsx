@@ -1,21 +1,11 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
 import InstaxPhotos from '@/components/InstaxPhotos';
 import { useIsMobile } from '@/hooks/use-mobile';
-
 const ApplicationsClosed = () => {
   const isMobile = useIsMobile();
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-  
   useEffect(() => {
     document.title = "Applications Closed | EnAccelerator";
     if (window.scrollTo) {
@@ -35,9 +25,7 @@ const ApplicationsClosed = () => {
     caption: "Cohort 2025",
     rotation: 8
   }];
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navbar />
       
       <main className="container pt-20 md:pt-28 pb-16">
@@ -70,19 +58,12 @@ const ApplicationsClosed = () => {
                 While applications are currently closed, we encourage you to prepare for the next cycle. 
                 Review our eligibility criteria and application requirements below to ensure you're ready when applications reopen.
               </p>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto"
-                onClick={() => setIsWaitlistOpen(true)}
-              >
+              <Button variant="outline" size="lg" className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto">
                 Join Waitlist
               </Button>
             </div>
           </div>
         </section>
-        
-        {/* Eligibility Section and Stay Updated CTA */}
         
         {/* Eligibility Section */}
         <section className="">
@@ -166,27 +147,6 @@ const ApplicationsClosed = () => {
       </main>
       
       <Footer />
-
-      {/* Waitlist Dialog */}
-      <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
-        <DialogContent className="max-w-4xl w-[90vw] h-[80vh] p-0 gap-0 bg-white/95 backdrop-blur-md border-0 shadow-2xl">
-          <DialogHeader className="p-6 pb-4 border-b">
-            <DialogTitle className="text-2xl font-bold text-center">Join the Waitlist</DialogTitle>
-          </DialogHeader>
-          <div className="flex-1 p-0">
-            <iframe 
-              src="https://enactus-melbourne.notion.site/ebd/222333bb4fd7801b842cc998da5c3fe2" 
-              width="100%" 
-              height="100%" 
-              frameBorder="0" 
-              allowFullScreen
-              className="rounded-b-lg"
-            />
-          </div>
-        </DialogContent>
-      </Dialog>
-    </div>
-  );
+    </div>;
 };
-
 export default ApplicationsClosed;
