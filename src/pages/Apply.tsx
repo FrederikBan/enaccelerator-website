@@ -19,21 +19,21 @@ const Apply = () => {
   // Application photos
   const applicationPhotos = [
     {
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      src: "images/stock_images/workshop-1.png",
       alt: "Workshop Session",
       caption: "Workshop Session #1",
       rotation: -2
     },
     {
-      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      alt: "Team Presentations",
-      caption: "Team Presentations",
+      src: "images/stock_images/enactus-committee.JPG",
+      alt: "Enactus Melbourne Committee",
+      caption: "Family of builders",
       rotation: 1
     },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      alt: "Mentoring Session",
-      caption: "Mentoring Session",
+      src: "images/stock_images/demoday-3.jpg",
+      alt: "Person giving presentation",
+      caption: "Present on the big stage",
       rotation: 3
     }
   ];
