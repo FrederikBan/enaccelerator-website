@@ -3,14 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const PLACEHOLDER_LOGOS = [
-  { name: 'University of Melbourne', image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=100&fit=crop&crop=center' },
-  { name: 'Startup Victoria', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&fit=crop&crop=center' },
-  { name: 'Innovation Hub', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=100&fit=crop&crop=center' },
-  { name: 'TechLaunch Partners', image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=200&h=100&fit=crop&crop=center' },
-  { name: 'Founders Institute', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=200&h=100&fit=crop&crop=center' },
-  { name: 'Venture Capital Fund', image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=100&fit=crop&crop=center' },
-  { name: 'Tech Accelerator', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&fit=crop&crop=center' },
-  { name: 'Business Incubator', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=100&fit=crop&crop=center' },
+  { name: 'Melbourne Accelerator Program', image: 'images/partners/map.png' },
+  { name: 'LaunchVic', image: 'images/partners/launchvic.png' },
+  { name: 'Notion', image: 'images/partners/notion.png' },
+  { name: 'Boab', image: 'images/partners/boab.png' }
 ];
 
 const LogoCarousel: React.FC = () => {
