@@ -2,6 +2,11 @@ import React, { useEffect } from 'react';
 
 const SignupSection = () => {
   useEffect(() => {
+    // Remove previous form to avoid duplication
+    const existing = document.querySelector('.ml-form-embedContainer');
+    if (existing) existing.innerHTML = '';
+
+    // Load MailerLite script
     const script = document.createElement('script');
     script.src = 'https://static.mailerlite.com/js/universal.js';
     script.async = true;
@@ -21,67 +26,13 @@ const SignupSection = () => {
             Subscribe to our mailing list for application dates, events, and startup resources.
           </p>
 
-          {/* MailerLite will inject the form here */}
+          {/* Correct MailerLite embed container — update the ID if needed */}
           <div
             id="mlb2-26946439"
             className="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-26946439"
           ></div>
         </div>
       </div>
-
-      <style>
-        {`
-          .ml-form-embedContainer .ml-form-embedWrapper {
-            background: transparent !important;
-            padding: 0 !important;
-          }
-
-          .ml-form-embedContainer .ml-form-embedContent {
-            margin-bottom: 1.5rem;
-          }
-
-          .ml-form-embedContainer input[type="email"] {
-            background-color: #fff;
-            border: none;
-            border-radius: 0.5rem;
-            height: 3rem;
-            padding: 0 1rem;
-            width: 100%;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-          }
-
-          .ml-form-embedContainer button {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            border-radius: 0.5rem;
-            padding: 0.75rem 2rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.2s;
-          }
-
-          .ml-form-embedContainer button:hover {
-            background-color: #333;
-          }
-
-          .ml-form-embedContainer .ml-form-successContent {
-            color: #000;
-          }
-
-          .ml-form-embedContainer .ml-form-successContent h4 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-          }
-
-          .ml-form-embedContainer .ml-form-successContent p {
-            font-size: 1rem;
-            color: rgba(0, 0, 0, 0.7);
-          }
-        `}
-      </style>
     </section>
   );
 };
