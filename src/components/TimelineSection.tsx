@@ -59,39 +59,39 @@ const TimelineSection = () => {
   return (
     <section id="timeline" className="bg-brand-light">
       <div className="container">
-        <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6">Your <span className="text-brand-yellow">10-Week</span> Journey</h2>
-          <p className="text-lg text-foreground/70">
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
+          <h2 className="mb-4 sm:mb-6">Your <span className="text-brand-yellow">10-Week</span> Journey</h2>
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed">
             Follow our program from ideation to launch, with tailored support every step of the way.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           {/* Timeline Navigation - Left Side - Hidden on mobile */}
           <div className="hidden lg:block lg:col-span-4 order-2 lg:order-1 lg:sticky lg:top-24">
             <div className="space-y-1">
               {timelineItems.map((item, index) => (
-                <button
-                  key={index}
-                  className={`w-full text-left p-4 transition-all duration-300 rounded-lg flex items-center gap-4 ${
-                    activeItem === index ? 'bg-brand-yellow text-black' : 'hover:bg-brand-yellow/10'
-                  }`}
-                  onClick={() => setActiveItem(index)}
-                >
-                  <div className={`h-10 w-10 rounded-full flex items-center justify-center text-sm font-bold ${
-                    activeItem === index ? 'bg-black text-brand-yellow' : 'bg-brand-yellow text-black'
-                  }`}>
-                    {item.week}
-                  </div>
-                  <div>
-                    <p className={`font-medium ${activeItem === index ? 'text-black' : 'text-foreground'}`}>
-                      Week {item.week}
-                    </p>
-                    <p className={`text-sm truncate ${activeItem === index ? 'text-black/70' : 'text-foreground/70'}`}>
-                      {item.title}
-                    </p>
-                  </div>
-                </button>
+                  <button
+                    key={index}
+                    className={`w-full text-left p-3 lg:p-4 transition-all duration-300 rounded-lg flex items-center gap-3 lg:gap-4 ${
+                      activeItem === index ? 'bg-brand-yellow text-black' : 'hover:bg-brand-yellow/10'
+                    }`}
+                    onClick={() => setActiveItem(index)}
+                  >
+                    <div className={`h-8 w-8 lg:h-10 lg:w-10 rounded-full flex items-center justify-center text-xs lg:text-sm font-bold ${
+                      activeItem === index ? 'bg-black text-brand-yellow' : 'bg-brand-yellow text-black'
+                    }`}>
+                      {item.week}
+                    </div>
+                    <div>
+                      <p className={`font-medium text-sm lg:text-base ${activeItem === index ? 'text-black' : 'text-foreground'}`}>
+                        Week {item.week}
+                      </p>
+                      <p className={`text-xs lg:text-sm truncate ${activeItem === index ? 'text-black/70' : 'text-foreground/70'}`}>
+                        {item.title}
+                      </p>
+                    </div>
+                  </button>
               ))}
             </div>
           </div>
@@ -100,15 +100,15 @@ const TimelineSection = () => {
           <div className="lg:col-span-8 order-1 lg:order-2">
             <Card className="border-brand-yellow overflow-hidden">
               <div className="h-2 bg-brand-yellow"></div>
-              <CardContent className="p-8">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 gap-4">
                   <div>
-                    <p className="text-sm text-foreground/70 mb-1">WEEK {timelineItems[activeItem].week}</p>
-                    <h3 className="text-2xl md:text-3xl font-bold">{timelineItems[activeItem].title}</h3>
+                    <p className="text-xs sm:text-sm text-foreground/70 mb-1">WEEK {timelineItems[activeItem].week}</p>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">{timelineItems[activeItem].title}</h3>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-1 sm:gap-2">
                     <button 
-                      className="h-10 w-10 rounded-full flex items-center justify-center border border-border hover:border-brand-yellow disabled:opacity-50"
+                      className="h-8 w-8 sm:h-10 sm:w-10 rounded-full flex items-center justify-center border border-border hover:border-brand-yellow disabled:opacity-50"
                       onClick={() => setActiveItem(prev => Math.max(prev - 1, 0))}
                       disabled={activeItem === 0}
                       aria-label="Previous week"
@@ -118,7 +118,7 @@ const TimelineSection = () => {
                       </svg>
                     </button>
                     <button 
-                      className="h-10 w-10 rounded-full flex items-center justify-center border border-border hover:border-brand-yellow disabled:opacity-50"
+                      className="h-8 w-8 sm:h-10 sm:w-10 rounded-full flex items-center justify-center border border-border hover:border-brand-yellow disabled:opacity-50"
                       onClick={() => setActiveItem(prev => Math.min(prev + 1, timelineItems.length - 1))}
                       disabled={activeItem === timelineItems.length - 1}
                       aria-label="Next week"
@@ -130,21 +130,21 @@ const TimelineSection = () => {
                   </div>
                 </div>
                 
-                <div className="mb-8">
-                  <p className="text-foreground/80 text-lg leading-relaxed">
+                <div className="mb-6 sm:mb-8">
+                  <p className="text-foreground/80 text-base sm:text-lg leading-relaxed">
                     {timelineItems[activeItem].description}
                   </p>
                 </div>
                 
                 {/* Visualization */}
-                <div className="bg-brand-light rounded-lg p-6">
-                  <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
+                <div className="bg-brand-light rounded-lg p-4 sm:p-6">
+                  <div className="h-3 sm:h-4 bg-gray-100 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-brand-yellow transition-all duration-500 ease-out" 
                       style={{ width: `${(activeItem + 1) * 12.5}%` }}
                     ></div>
                   </div>
-                  <div className="flex justify-between mt-3 text-xs text-foreground/70">
+                  <div className="flex justify-between mt-2 sm:mt-3 text-xs text-foreground/70">
                     <span>Start</span>
                     <span>Demo Day</span>
                   </div>

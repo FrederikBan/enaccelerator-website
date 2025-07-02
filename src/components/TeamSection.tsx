@@ -42,16 +42,16 @@ const teamMembers: TeamMember[] = [
 
 const TeamSection = () => {
   return (
-    <section id="team" className="bg-gray-50 py-16 md:py-24">
+    <section id="team" className="bg-gray-50">
       <div className="container">
-        <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6">Meet Our <span className="text-brand-yellow">Team</span></h2>
-          <p className="text-lg text-foreground/70">
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
+          <h2 className="mb-4 sm:mb-6">Meet Our <span className="text-brand-yellow">Team</span></h2>
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed">
             Our experienced mentors and advisors are dedicated to helping student founders succeed.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
               <CardContent className="p-6 flex flex-col h-full">

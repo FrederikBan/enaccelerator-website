@@ -39,7 +39,7 @@ const BenefitsSection = () => {
   };
 
   return (
-    <section id="benefits" className="bg-brand-dark text-white py-24 md:py-32 relative overflow-hidden">
+    <section id="benefits" className="bg-brand-dark text-white relative overflow-hidden">
       {/* Animated gradient background */}
       <motion.div 
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#222,#000)] opacity-50 z-0"
@@ -78,15 +78,15 @@ const BenefitsSection = () => {
       </div>
       
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <motion.div 
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-white mb-6">
+            <h2 className="text-white mb-4 sm:mb-6">
               Why Join <motion.span 
                 className="text-brand-yellow"
                 animate={{ 
@@ -95,12 +95,12 @@ const BenefitsSection = () => {
                 transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
               >EnAccelerator</motion.span>?
             </h2>
-            <p className="text-lg text-white/70 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
               We provide everything you need to transform your idea into a your very own start-up.
             </p>
             
             <motion.div 
-              className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="show"
@@ -114,28 +114,28 @@ const BenefitsSection = () => {
                   whileHover={{ scale: 1.03 }}
                 >
                   <motion.h3 
-                    className="text-xl font-bold mb-2 text-brand-yellow flex items-center"
+                    className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-brand-yellow flex items-center"
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
                     <span className="inline-block mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span> 
                     {benefit.title}
                   </motion.h3>
-                  <p className="text-white/70">{benefit.description}</p>
+                  <p className="text-sm sm:text-base text-white/70 leading-relaxed">{benefit.description}</p>
                 </motion.div>
               ))}
             </motion.div>
           </motion.div>
           
           <motion.div 
-            className="lg:pl-12 relative"
+            className="lg:pl-8 xl:pl-12 relative mt-8 lg:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="aspect-square relative z-10">
-              <div className="grid grid-cols-2 gap-4 h-full">
+            <div className="aspect-square relative z-10 max-w-md mx-auto lg:max-w-none">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 h-full">
                 <motion.div 
                   className="space-y-4"
                   initial={{ x: -20 }}
@@ -143,7 +143,7 @@ const BenefitsSection = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <motion.div 
-                    className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg h-full p-4 flex items-center justify-center overflow-hidden"
+                    className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg h-full p-2 sm:p-4 flex items-center justify-center overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
@@ -154,7 +154,7 @@ const BenefitsSection = () => {
                   </motion.div>
                   
                   <motion.div 
-                    className="bg-white/5 backdrop-blur-sm rounded-lg h-full p-4 overflow-hidden"
+                    className="bg-white/5 backdrop-blur-sm rounded-lg h-full p-2 sm:p-4 overflow-hidden relative"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
@@ -162,7 +162,7 @@ const BenefitsSection = () => {
                       alt="Group of people posing for photo"
                       className="object-cover w-full h-full rounded-md"
                     />
-                    <p className="text-white/80 text-sm absolute bottom-3 left-3 bg-black/60 p-2 rounded">Join a community of founders driven by innovation</p>
+                    <p className="text-white/80 text-xs sm:text-sm absolute bottom-2 sm:bottom-3 left-2 sm:left-3 bg-black/60 p-1.5 sm:p-2 rounded">Join a community of founders driven by innovation</p>
                   </motion.div>
                 </motion.div>
                 
@@ -173,7 +173,7 @@ const BenefitsSection = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <motion.div 
-                    className="bg-white/5 backdrop-blur-sm rounded-lg h-2/5 p-4 overflow-hidden"
+                    className="bg-white/5 backdrop-blur-sm rounded-lg h-2/5 p-2 sm:p-4 overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
@@ -184,7 +184,7 @@ const BenefitsSection = () => {
                   </motion.div>
                   
                   <motion.div 
-                    className="bg-brand-yellow/10 backdrop-blur-sm rounded-lg h-3/5 p-4 relative overflow-hidden"
+                    className="bg-brand-yellow/10 backdrop-blur-sm rounded-lg h-3/5 p-2 sm:p-4 relative overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
@@ -198,7 +198,7 @@ const BenefitsSection = () => {
               
               {/* Accent elements */}
               <motion.div 
-                className="absolute -top-6 -left-6 w-24 h-24 bg-brand-yellow rounded-md z-0"
+                className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-16 h-16 sm:w-24 sm:h-24 bg-brand-yellow rounded-md z-0"
                 animate={{ 
                   rotate: [0, 12, 0], 
                   scale: [1, 1.05, 1] 
@@ -207,7 +207,7 @@ const BenefitsSection = () => {
               />
               
               <motion.div 
-                className="absolute -bottom-10 -right-10 w-32 h-32 border-2 border-brand-yellow/30 rounded-full z-0"
+                className="absolute -bottom-6 -right-6 sm:-bottom-10 sm:-right-10 w-20 h-20 sm:w-32 sm:h-32 border-2 border-brand-yellow/30 rounded-full z-0"
                 animate={{ 
                   rotate: [0, 360], 
                   scale: [1, 1.1, 1] 

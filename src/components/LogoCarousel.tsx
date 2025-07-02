@@ -18,10 +18,10 @@ const LogoCarousel: React.FC = () => {
   const animationDistance = PLACEHOLDER_LOGOS.length * logoWidth;
 
   return (
-    <section className="py-12 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
+    <section className="py-8 sm:py-12 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
       <div className="container">
         <motion.h3 
-          className="text-center text-xl md:text-2xl mb-8"
+          className="text-center text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
