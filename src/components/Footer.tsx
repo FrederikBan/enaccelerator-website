@@ -48,9 +48,9 @@ const Footer = () => {
               <div>
                 <h3 className="font-bold mb-4">Program</h3>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">About</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Timeline</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Apply</a></li>
+                  <li><a href="/#about" className="text-foreground/70 hover:text-brand-yellow transition-colors">About</a></li>
+                  <li><a href="/#timeline" className="text-foreground/70 hover:text-brand-yellow transition-colors">Timeline</a></li>
+                  <li><a href="/applications-closed" className="text-foreground/70 hover:text-brand-yellow transition-colors">Apply</a></li>
                 </ul>
               </div>
               {/*<div>
@@ -66,13 +66,13 @@ const Footer = () => {
                 <h3 className="font-bold mb-4">Company</h3>
                 <ul className="space-y-2">
                   <li><a href="https://enactusmelbourne.com/" target="_blank" className="text-foreground/70 hover:text-brand-yellow transition-colors">Enactus Melbourne</a></li>
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Team</a></li>
+                  <li><a href="/#team" className="text-foreground/70 hover:text-brand-yellow transition-colors">Team</a></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-bold mb-4">Contact</h3>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-foreground/70 hover:text-brand-yellow transition-colors">Email Us</a></li>
+                  <li><a href="mailto:enaccelerator@enactusmelbourne.com" className="text-foreground/70 hover:text-brand-yellow transition-colors">Email Us</a></li>
                 </ul>
               </div>
             </div>
