@@ -69,9 +69,9 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="bg-white">
       <div className="container">
-        <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6">Success <span className="text-brand-yellow">Stories</span></h2>
-          <p className="text-lg text-foreground/70">
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
+          <h2 className="mb-4 sm:mb-6">Success <span className="text-brand-yellow">Stories</span></h2>
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed">
             Hear from student founders who transformed their ideas into startups through our program.
           </p>
         </div>
