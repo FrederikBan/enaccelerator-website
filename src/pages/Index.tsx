@@ -12,7 +12,6 @@ import SignupSection from '@/components/SignupSection';
 import LogoCarousel from '@/components/LogoCarousel';
 import Footer from '@/components/Footer';
 import { initScrollReveal } from '@/utils/scrollReveal';
-import CultureCollage from '@/components/CultureCollage';
 
 const Index = () => {
   useEffect(() => {
@@ -39,7 +38,6 @@ const Index = () => {
           <LogoCarousel />
           <ProgramSection />
           <TimelineSection />
-          <CultureCollage />
           <BenefitsSection />
           <TeamSection />
           <TestimonialsSection />

@@ -119,7 +119,8 @@ const HeroSection = () => {
             variants={fadeInUp}
             custom={2}
           >
-            EnAccelerator is the premier student-run startup incubator at the University of Melbourne.
+            EnAccelerator is the premier student-run startup incubator at the University of Melbourne, 
+            helping students from all backgrounds build their own startup.
           </motion.p>
           
           <motion.div 
@@ -134,14 +135,14 @@ const HeroSection = () => {
             >
               <Link to="/applications-closed">Apply Now</Link>
             </Button>
-            {/* <Button 
+            <Button 
               size="lg" 
               variant="outline" 
               className="w-full sm:w-auto min-w-[160px] sm:min-w-[180px] backdrop-blur-sm border-white/20 hover:border-brand-yellow/50 hover:bg-white/5 transition-all h-12 sm:h-14 text-sm sm:text-base" 
               asChild
             >
               <a href="#program">Learn More</a>
-            </Button> */}
+            </Button>
           </motion.div>
           
           {/* New: Featured highlights 

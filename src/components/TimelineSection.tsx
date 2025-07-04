@@ -7,57 +7,49 @@ const timelineItems = [
     week: "1",
     title: "Induction & Introduction",
     description: "Meet your cohort of fellow founders, and learn about the program, and get an introduction to start-ups.",
-    color: "bg-brand-yellow",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow"
   },
   {
     week: "2",
     title: "Problem Space",
     description: "Learn about what a Problem Space is, why choosing the right one is important and how to go about it.",
-    color: "bg-brand-yellow/90",
-    image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/90"
   },
   {
     week: "3",
     title: "Key Customer",
     description: "Learn how to build customer profiles and understand their needs.",
-    color: "bg-brand-yellow/80",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/80"
   },
   {
     week: "4",
     title: "Customer Validation",
     description: "Learn how to recognise when a problem exists and when to start building a solution.",
-    color: "bg-brand-yellow/70",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/70"
   },
   {
     week: "5",
     title: "Prototyping",
     description: "Learn how to transform customer needs into a solution, and how to go about building one.",
-    color: "bg-brand-yellow/60",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/60"
   },
   {
     week: "6-8",
     title: "Building & Testing",
     description: "Get three weeks of open workshops supported by founders and industry professionals to build your MVP",
-    color: "bg-brand-yellow/50",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/50"
   },
   {
     week: "9",
     title: "Pitching",
     description: "Learn how to develop a pitch deck and sell the story of your solution.",
-    color: "bg-brand-yellow/40",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/40"
   },
   {
     week: "10",
     title: "Demo Day",
     description: "Present your startup to fellow founders, mentors, and the university community.",
-    color: "bg-brand-yellow/30",
-    image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=250&fit=crop"
+    color: "bg-brand-yellow/30"
   }
 ];
 
@@ -139,17 +131,9 @@ const TimelineSection = () => {
                 </div>
                 
                 <div className="mb-6 sm:mb-8">
-                  <p className="text-foreground/80 text-base sm:text-lg leading-relaxed mb-6">
+                  <p className="text-foreground/80 text-base sm:text-lg leading-relaxed">
                     {timelineItems[activeItem].description}
                   </p>
-                  <div className="relative overflow-hidden rounded-lg bg-gray-100">
-                    <img
-                      src={timelineItems[activeItem].image}
-                      alt={`Week ${timelineItems[activeItem].week} - ${timelineItems[activeItem].title}`}
-                      className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-300 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
                 </div>
                 
                 {/* Visualization */}
