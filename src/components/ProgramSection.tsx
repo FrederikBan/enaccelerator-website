@@ -1,114 +1,169 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-
-const features = [
-  {
-    title: "Hands-on Mentorship",
-    description: "Work with experienced founders and industry professionals who guide you through every step of your startup journey."
-  },
-  {
-    title: "Workshop Series",
-    description: "Weekly skill-building sessions covering all parts of the startup incubation phase."
-  },
-  {
-    title: "Dedicated Cohort",
-    description: "Work with a cohort of 16 student founders, with the same drive and passion to build as you."
-  },
-  {
-    title: "Open To All Skill Levels",
-    description: "Never built a startup before? No problem - learn everything you need to know about building a startup."
-  },
-  {
-    title: "Network Building",
-    description: "Connect with Melbourne's vibrant startup ecosystem and build valuable industry relationships."
-  },
-  {
-    title: "Demo Day",
-    description: "Showcase your startup to other startup founders, industry leaders, and the university community."
-  }
-];
+import React, { useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ProgramSection = () => {
-  const cardVariants = {
-    offscreen: {
-      y: 50,
-      opacity: 0
-    },
-    onscreen: {
-      y: 0,
+  const [isHovered, setIsHovered] = useState(false);
+  const { scrollYProgress } = useScroll();
+  
+  // Parallax effect for background elements
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
       opacity: 1,
+      y: 0,
       transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.8
+        delay: i * 0.1,
+        duration: 0.6,
+        ease: "easeOut"
       }
-    },
-    hover: {
-      y: -10,
-      boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.1)",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10
-      }
-    }
+    })
   };
 
+  const words = [
+    "EnAccelerator", "is", "more", "than", "just", "an", "incubator", "—", "it's", "a", 
+    "comprehensive", "10-week", "journey", "that", "transforms", "ambitious", "students", 
+    "into", "confident", "founders.", "Through", "hands-on", "mentorship,", "intensive", 
+    "workshops,", "and", "a", "supportive", "cohort", "of", "fellow", "entrepreneurs,", 
+    "we", "provide", "everything", "you", "need", "to", "turn", "your", "innovative", 
+    "ideas", "into", "real,", "impactful", "startups."
+  ];
+
   return (
-    <section id="program" className="bg-white relative">
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-brand-yellow/10 to-transparent rounded-bl-full -z-0 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-brand-yellow/10 to-transparent rounded-tr-full -z-0 blur-3xl"></div>
+    <section id="program" className="bg-gradient-to-br from-background via-background to-background/95 relative overflow-hidden min-h-screen flex items-center">
+      {/* Animated background elements */}
+      <motion.div 
+        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl"
+        style={{ y: backgroundY }}
+      />
+      <motion.div 
+        className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl"
+        style={{ y: backgroundY }}
+        animate={{ 
+          scale: [1, 1.1, 1],
+          opacity: [0.3, 0.5, 0.3] 
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
       
-      <div className="container relative z-10">
+      {/* Floating particles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-primary/20 rounded-full"
+          style={{
+            left: `${20 + i * 15}%`,
+            top: `${30 + i * 8}%`,
+          }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.2, 0.6, 0.2],
+          }}
+          transition={{
+            duration: 3 + i * 0.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: i * 0.8,
+          }}
+        />
+      ))}
+
+      <div className="container relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          className="text-center space-y-8 sm:space-y-12"
+          style={{ y: textY }}
         >
-          <h2 className="mb-4 sm:mb-6">
-            A <motion.span 
-                className="text-brand-yellow"
-                animate={{ 
-                  textShadow: ["0 0 0px #FFC222", "0 0 8px #FFC22250", "0 0 0px #FFC222"],
-                }}
-                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-              >Comprehensive</motion.span> Program <br className="hidden sm:block"/>For Future Founders
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            EnAccelerator provides a structured 10-week journey from idea to startup launch, with all the resources you need to succeed.
-          </p>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              initial="offscreen"
-              whileInView="onscreen"
-              whileHover="hover"
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.1 }}
+          {/* Section header */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-4"
+          >
+            <motion.h2 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent leading-tight"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
             >
-              <Card className="border backdrop-blur-sm border-border/50 hover:border-brand-yellow/50 hover:shadow-lg transition-all duration-300 group overflow-hidden h-full">
-                <CardContent className="p-4 sm:p-6">
-                  <motion.div 
-                    className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-brand-yellow/10 rounded-lg text-brand-yellow mb-4 sm:mb-5 group-hover:bg-brand-yellow group-hover:text-white transition-colors duration-300"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                  >
-                    <span className="text-lg sm:text-xl font-bold">{index + 1}</span>
-                  </motion.div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{feature.title}</h3>
-                  <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
+              About Our Program
+            </motion.h2>
+            <motion.div 
+              className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: 96 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.5 }}
+            />
+          </motion.div>
+
+          {/* Interactive text content */}
+          <motion.div
+            className="relative"
+            onHoverStart={() => setIsHovered(true)}
+            onHoverEnd={() => setIsHovered(false)}
+          >
+            <motion.div 
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed text-foreground/90 max-w-4xl mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {words.map((word, index) => (
+                <motion.span
+                  key={index}
+                  custom={index}
+                  variants={textVariants}
+                  className="inline-block mr-2 sm:mr-3"
+                  whileHover={{ 
+                    scale: 1.05,
+                    color: "hsl(var(--primary))",
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  {word}
+                </motion.span>
+              ))}
             </motion.div>
-          ))}
-        </div>
+
+            {/* Interactive highlight overlay */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 rounded-2xl -z-10"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ 
+                opacity: isHovered ? 1 : 0,
+                scale: isHovered ? 1 : 0.95 
+              }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.div>
+
+          {/* Call to action hint */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="pt-8"
+          >
+            <motion.p 
+              className="text-sm sm:text-base text-foreground/60 font-medium"
+              animate={{ 
+                opacity: [0.6, 1, 0.6] 
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+            >
+              Ready to transform your ideas into reality?
+            </motion.p>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
