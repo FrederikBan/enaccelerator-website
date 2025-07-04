@@ -146,7 +146,7 @@ const TimelineSection = () => {
                     <img
                       src={timelineItems[activeItem].image}
                       alt={`Week ${timelineItems[activeItem].week} - ${timelineItems[activeItem].title}`}
-                      className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 hover:scale-105"
+                      className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-300 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
