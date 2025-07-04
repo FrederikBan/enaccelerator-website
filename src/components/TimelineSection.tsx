@@ -138,12 +138,10 @@ const TimelineSection = () => {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
-                  <div>
-                    <p className="text-foreground/80 text-base sm:text-lg leading-relaxed mb-4">
-                      {timelineItems[activeItem].description}
-                    </p>
-                  </div>
+                <div className="mb-6 sm:mb-8">
+                  <p className="text-foreground/80 text-base sm:text-lg leading-relaxed mb-6">
+                    {timelineItems[activeItem].description}
+                  </p>
                   <div className="relative overflow-hidden rounded-lg bg-gray-100">
                     <img
                       src={timelineItems[activeItem].image}
