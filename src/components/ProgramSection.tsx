@@ -26,7 +26,7 @@ const ProgramSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                EnAccelerator is more than just an incubator — it's a comprehensive 10-week journey that transforms ambitious students into confident founders. Through hands-on mentorship, intensive workshops, and a supportive cohort of fellow entrepreneurs, we provide everything you need to turn your innovative ideas into real, impactful startups.
+                Over a semester, you will be part of a dedicated cohort of like-minded individuals supported through a meticulously designed program, taking you from ideation all the way to your MVP.
               </motion.p>
               
               <motion.p 
@@ -36,7 +36,7 @@ const ProgramSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                [Your additional program content will go here. This section is designed to accommodate longer text while maintaining readability and visual appeal. You can add multiple paragraphs describing your program features, methodology, success stories, or any other relevant information about EnAccelerator.]
+                As part of the Enactus Melbourne committee, you will be apart of a close-knit community of other students and gain access to social events and opportunities to learn new skills.
               </motion.p>
               
               <motion.p 
@@ -46,7 +46,7 @@ const ProgramSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                Ready to transform your ideas into reality? Join us for an experience that will change how you think about entrepreneurship and give you the tools to build the future.
+                Supported by real founders and start-up professionals, EnAccelerator supports you through your first steps on your start-up journey.
               </motion.p>
             </div>
             
