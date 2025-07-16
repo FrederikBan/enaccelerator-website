@@ -139,17 +139,9 @@ const TimelineSection = () => {
                 </div>
                 
                 <div className="mb-6 sm:mb-8">
-                  <p className="text-foreground/80 text-base sm:text-lg leading-relaxed mb-6">
+                  <p className="text-foreground/80 text-base sm:text-lg leading-relaxed">
                     {timelineItems[activeItem].description}
                   </p>
-                  <div className="relative overflow-hidden rounded-lg bg-gray-100">
-                    <img
-                      src={timelineItems[activeItem].image}
-                      alt={`Week ${timelineItems[activeItem].week} - ${timelineItems[activeItem].title}`}
-                      className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-300 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
                 </div>
                 
                 {/* Visualization */}
