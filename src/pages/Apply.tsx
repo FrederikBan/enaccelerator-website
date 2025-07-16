@@ -155,11 +155,11 @@ Be prepared to submit your video application and your resume!</p>
                 <ul className="space-y-4">
                   
                   <li className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-brand-yellow rounded-full flex-shrink-0"></div>
                     <span className="text-foreground/80">Applicant resume/CV</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-brand-yellow rounded-full flex-shrink-0"></div>
                     <span className="text-foreground/80">2-minute video to showcase your personality and skills</span>
                   </li>
                   
@@ -170,16 +170,16 @@ Be prepared to submit your video application and your resume!</p>
                 <h3 className="text-2xl font-bold mb-6 text-brand-yellow">Selection Criteria</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-brand-yellow rounded-full flex-shrink-0"></div>
                     <span className="text-foreground/80">Willingness to learn and build a startup</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-brand-yellow rounded-full flex-shrink-0"></div>
                     <span className="text-foreground/80">Well-roundedness and applicable skills</span>
                   </li>
                   
                   <li className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-brand-yellow rounded-full flex-shrink-0"></div>
                     <span className="text-foreground/80">Desire to collaborate and share knowledge with peers</span>
                   </li>
                 </ul>
