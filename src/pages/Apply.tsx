@@ -51,7 +51,7 @@ const Apply = () => {
         <InstaxPhotos photos={applicationPhotos} />
         
         {/* Timeline Section */}
-        <section className="mb-12">
+        <section className="mb-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Application Timeline</h2>
             
@@ -86,7 +86,7 @@ Be prepared to submit your video application and your resume!</p>
         </section>
         
         {/* Eligibility Section */}
-        <section className="mb-12">
+        <section className="mb-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Eligibility Requirements</h2>
             
@@ -145,7 +145,7 @@ Be prepared to submit your video application and your resume!</p>
         </section>
         
         {/* Application Requirements */}
-        <section className="mb-12">
+        <section className="mb-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">What You'll Need</h2>
             
