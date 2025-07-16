@@ -196,9 +196,14 @@ Be prepared to submit your video application and your resume!</p>
               <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
                 Join our community of innovators and get the support, mentorship, and resources you need to build a successful startup.
               </p>
-              <Button size="lg" className="bg-brand-yellow text-black hover:bg-brand-yellow/90 text-lg px-8 py-4 h-auto">
+              <a 
+                href="https://forms.gle/km9obKkQ7sWsyCUo7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md bg-brand-yellow text-black hover:bg-brand-yellow/90 text-lg px-8 py-4 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              >
                 Start Your Application
-              </Button>
+              </a>
               <p className="mt-4 text-sm text-foreground/60">Application deadline: July 30, 2025, 9:00 PM AEST</p>
             </div>
           </div>
