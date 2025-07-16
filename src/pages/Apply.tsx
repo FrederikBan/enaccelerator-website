@@ -153,8 +153,10 @@ Be prepared to submit your video application and your resume!</p>
               <div className="bg-white rounded-xl p-8 shadow-lg border border-border">
                 <h3 className="text-2xl font-bold mb-6 text-brand-yellow">Required Materials</h3>
                 <ul className="space-y-4">
-                  
-                  
+                  <li className="flex items-center gap-3">
+                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <span className="text-foreground/80">Completed application form</span>
+                  </li>
                   <li className="flex items-center gap-3">
                     <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
                     <span className="text-foreground/80">Applicant resume/CV</span>
@@ -162,6 +164,10 @@ Be prepared to submit your video application and your resume!</p>
                   <li className="flex items-center gap-3">
                     <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
                     <span className="text-foreground/80">2-minute video to showcase your personality and skills</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="h-2 w-2 bg-brand-yellow rounded-full"></div>
+                    <span className="text-foreground/80">Brief startup idea description (optional)</span>
                   </li>
                 </ul>
               </div>
