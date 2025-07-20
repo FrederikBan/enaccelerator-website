@@ -132,7 +132,7 @@ const HeroSection = () => {
               className="bg-brand-yellow text-black hover:bg-brand-yellow/90 w-full sm:w-auto min-w-[160px] sm:min-w-[180px] hover:scale-105 transition-transform shadow-md h-12 sm:h-14 text-sm sm:text-base" 
               asChild
             >
-              <Link to="/applications-closed">Apply Now</Link>
+              <Link to="/apply">Apply Now</Link>
             </Button>
             {/* <Button 
               size="lg" 
