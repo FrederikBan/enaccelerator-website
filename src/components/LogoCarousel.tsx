@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const PLACEHOLDER_LOGOS = [
+  { name: 'HEX', image: 'images/partners/hex.png' },
   { name: 'Melbourne Accelerator Program', image: 'images/partners/map.png' },
   { name: 'LaunchVic', image: 'images/partners/launchvic.png' },
   { name: 'Notion', image: 'images/partners/notion.png' },
