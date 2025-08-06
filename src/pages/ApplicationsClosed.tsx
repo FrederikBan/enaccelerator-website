@@ -51,8 +51,8 @@ const ApplicationsClosed = () => {
             <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20">
               <h2 className="text-3xl font-bold mb-8">Next Application Cycle</h2>
               <div className="inline-block bg-white rounded-xl px-8 py-6 mb-8 shadow-lg">
-                <p className="text-3xl font-bold text-brand-yellow mb-2">Opening August 2025</p>
-                <p className="text-foreground/70 text-lg">For the 2025 Semester 2 Cohort</p>
+                <p className="text-3xl font-bold text-brand-yellow mb-2">Opening March 2025</p>
+                <p className="text-foreground/70 text-lg">For the 2025 Semester 1 Cohort</p>
               </div>
               <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
                 While applications are currently closed, we encourage you to prepare for the next cycle. 
