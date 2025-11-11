@@ -45,18 +45,13 @@ const ApplicationsClosed = () => {
         {/* Instax Photos */}
         <InstaxPhotos photos={photos} />
         
-        {/* Next Cohort Information */}
+        {/* Stay Updated Section */}
         <section className="">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-2xl p-12 text-center border border-brand-yellow/20">
-              <h2 className="text-3xl font-bold mb-8">Next Application Cycle</h2>
-              <div className="inline-block bg-white rounded-xl px-8 py-6 mb-8 shadow-lg">
-                <p className="text-3xl font-bold text-brand-yellow mb-2">Opening March 2025</p>
-                <p className="text-foreground/70 text-lg">For the 2026 Semester 1 Cohort</p>
-              </div>
+              <h2 className="text-3xl font-bold mb-8">Stay Updated</h2>
               <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-                While applications are currently closed, we encourage you to prepare for the next cycle. 
-                Review our eligibility criteria and application requirements below to ensure you're ready when applications reopen.
+                Stay updated with what lies next for EnAccelerator. Join our waitlist to be the first to know about upcoming opportunities, events, and when applications reopen.
               </p>
                 <a href="https://enactus-melbourne.notion.site/222333bb4fd7801b842cc998da5c3fe2?pvs=105" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black text-lg px-8 py-4 h-auto">
