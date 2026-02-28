@@ -122,17 +122,25 @@ const HeroSection = () => {
             EnAccelerator is the premier student-run startup incubator at the University of Melbourne.
           </motion.p>
           
-          <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+          <motion.p
+            className="text-lg sm:text-xl md:text-2xl font-bold text-brand-yellow mb-6 sm:mb-8"
             variants={fadeInUp}
             custom={3}
+          >
+            Now accepting applications for Semester 1, 2026!
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+            variants={fadeInUp}
+            custom={4}
           >
             <Button 
               size="lg" 
               className="bg-brand-yellow text-black hover:bg-brand-yellow/90 w-full sm:w-auto min-w-[160px] sm:min-w-[180px] hover:scale-105 transition-transform shadow-md h-12 sm:h-14 text-sm sm:text-base" 
               asChild
             >
-              <Link to="/applications-closed">Apply Now</Link>
+              <a href="https://forms.gle/acq8vyU4hRR6uufT6" target="_blank" rel="noopener noreferrer">Apply Now</a>
             </Button>
             {/* <Button 
               size="lg" 
