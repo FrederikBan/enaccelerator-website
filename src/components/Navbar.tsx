@@ -82,7 +82,7 @@ const Navbar = () => {
             </button>
           ))}
           <Button className="bg-brand-yellow text-black hover:bg-brand-yellow/90" asChild>
-            <a href="https://forms.gle/acq8vyU4hRR6uufT6" target="_blank" rel="noopener noreferrer">Apply Now</a>
+            <Link to="/apply">Applications Closed</Link>
           </Button>
         </nav>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               asChild
             >
-              <a href="https://forms.gle/acq8vyU4hRR6uufT6" target="_blank" rel="noopener noreferrer">Apply Now</a>
+              <Link to="/apply">Applications Closed</Link>
             </Button>
           </div>
         </div>
