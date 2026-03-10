@@ -18,13 +18,27 @@ const teamMembers: TeamMember[] = [
     name: "Frederik Bangsgaard",
     role: "Project Lead",
     bio: "Investments @ NextGen | StartUpLink Project Director | EnAccelerator Project Lead | Full stack dev | Melb Uni",
+    imageUrl: "/team/frederik.jpg",
     linkedin: "https://www.linkedin.com/in/frederik-bangsgaard-11240826b/",
   },
   {
     name: "Mark Ong",
     role: "Project Lead",
     bio: "Startups | Content Creation",
+    imageUrl: "/team/mark.jpg",
     linkedin: "https://www.linkedin.com/in/mark-ong-032442358/",
+  },
+  {
+    name: "Trishton Lee",
+    role: "Project Coordinator",
+    bio: "Finance and Business Analytics @ UniMelb",
+    imageUrl: "/team/trishton.jpg",
+  },
+  {
+    name: "Tiger Diao",
+    role: "Project Coordinator",
+    bio: "BCom & Dip.Music @ UniMelb",
+    imageUrl: "/team/tiger.jpg",
   }
 ];
 
